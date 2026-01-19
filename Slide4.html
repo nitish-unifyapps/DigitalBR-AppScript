@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Learner Engagement Dashboard</title>
+</head>
+<body>
+    <!-- :dart: LEARNER ENGAGEMENT SLIDE WITH BACKGROUND IMAGE -->
+    <script type="application/json" id="slide-elements">
+    {
+        "slideSize": {
+            "width": 720,
+            "height": 405
+        },
+        "elements": [
+      {
+        "type": "image",
+        "url": "https://prod-uploads.unifyapps.com/user-uploads/10100/1764755347784/Slide_4.png",
+        "x": 0,
+        "y": 0,
+        "width": 720,
+        "height": 405
+      },
+      {
+        "type": "text",
+        "content": "Meet the Docebo Account Team",
+        "fontSize": 31,
+        "textAlign": "start",
+        "fontWeight": "bold",
+        "color": "#000000",
+        "x": 29,
+        "y": 30,
+        "width": 704,
+        "height": 48.336
+      },
+      {
+        "type": "arrayMap",
+        "x": 29,
+        "y": 104,
+        "layout": "grid",
+        "columns": 2,
+        "spacing": 285,
+        "rowSpacing": 90,
+        "items": "{{doceboTeamArray}}",
+        "template": {
+            "type": "teamMember",
+            "x": 0,
+            "y": 0,
+            "width": 260,
+            "height": 90,
+            "dynamicProps": {
+                "profilePicture": "profilePicture",
+                "name": "name",
+                "membership": "membership"
+            }
+        }
+      }
+    ]
+    }
+    </script>
+</body>
+</html>
