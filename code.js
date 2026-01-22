@@ -5,9 +5,12 @@
 
 const CONFIG = {
   PRESENTATION_NAME: 'Business Review',
-  SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18' ] 
+  //SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18' ] 
 
-  // SLIDE_TEMPLATES:['Slide17']
+  //SLIDE_TEMPLATES:['Slide17_OptimizationStrategyTable']
+  //SLIDE_TEMPLATES:[ 'Slide13_LearnerEngagement', 'Slide14_LearningSession', 'Slide15_ContentEffectiveness', 'Slide16_OptimizationAndSuccessPlan', 'Slide17_OptimizationStrategyTable', 'Slide17A_QuarterlySuccessPlanning', 'Slide18_Grazie','Slide19_Appendix' ] 
+
+  SLIDE_TEMPLATES:['Slide17_OptimizationStrategyTable']
 };
 
 const SHEETS_CONFIG = {
@@ -55,6 +58,36 @@ function createCoordinateSlides() {
       "date3": "<span style=\"font-size: 20px\">04 2025</span>",
       "date4": "<span style=\"font-size: 20px\">07 2025</span>",
       "date5": "<span style=\"font-size: 20px\">11 2025</span>",
+      "key1": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "key2": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "key3": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "key4": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "key5": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "custOwner1": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "custOwner2": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "custOwner3": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "custOwner4": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "custOwner5": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "doceboOwner1": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "doceboOwner2": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "doceboOwner3": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "doceboOwner4": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "doceboOwner5": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "priority1": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "priority2": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "priority3": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "priority4": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "priority5": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "status1": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "status2": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "status3": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "status4": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "status5": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "dueDate1": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "dueDate2": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "dueDate3": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "dueDate4": "<span style=\"font-size: 9px\">Enter you text here</span>",
+      "dueDate5": "<span style=\"font-size: 9px\">Enter you text here</span>",
       "doceboTeamArray": [
         {
           "Citations": "[2,3,4,5]",
@@ -98,6 +131,9 @@ function createCoordinateSlides() {
       "metrics3": "<span style=\"font-size: 17.5px\">User adoption rate and regional deployment success</span>",
       "metrics4": "<span style=\"font-size: 17.5px\">User satisfaction scores and platform utilization rates</span>",
       "metrics5": "<span style=\"font-size: 17.5px\">Content creation efficiency and quality metrics</span>",
+      "meetGoalOne": "<span style=\"font-size: 14px\">· Align on your strategic goals and vision in partnership with Docebo.</span>",
+      "meetGoalTwo": "<span style=\"font-size: 14px\">· Showcase value in the tools you have access to, provide optimization recommendations and relevant product updates.</span>",
+      "meetGoalThree": "<span style=\"font-size: 14px\">· Success planning.</span>",
       "milestone1": "<span style=\"font-size: 20px\">CSM Introduction<br>and Alignment</span>",
       "milestone2": "<span style=\"font-size: 20px\">AI Authoring Demo<br>and Blueprint</span>",
       "milestone3": "<span style=\"font-size: 20px\">Renewal Discussion<br>and Planning</span>",
@@ -518,15 +554,43 @@ function buildAllReplacements(parameters) {
           processTeamMembers(parameters[dataType], replacements, 'account');
           break;
         case 'tableData':
-          processTableData(parameters[dataType], replacements);
+  // This keeps your existing table formatting working if you use type: "table"
+  processTableData(parameters[dataType], replacements);
+  
+  // NEW: Create individual text box mappings for Optimization Strategy fields
+  if (Array.isArray(parameters[dataType])) {
+    parameters[dataType].forEach((row, index) => {
+      const i = index + 1;
+      
+      // Column 1: Optimization Area
+      replacements[`{{area${i}}}`] = row.area || '';
+      
+      // Column 2: Use Case (Mapped specifically from Optimization Strategy data)
+      replacements[`{{optUseCase${i}}}`] = row.useCase || '';
+      
+      // Column 3: Docebo Feature(s)
+      replacements[`{{features${i}}}`] = row.features || '';
+      
+      // Column 4: Business Impact
+      replacements[`{{impact${i}}}`] = row.impact || '';
+      
+      // Column 5: Mutual Action Plan
+      replacements[`{{actionPlan${i}}}`] = row.actionPlan || '';
+      
+      Logger.log(`✅ Fully mapped Row ${i} from Optimization Strategy`);
+    });
+  }
+  break;
+        
+        case 'goalsMeet':
+          processMeetingGoals(parameters[dataType], replacements);
           break;
-
+        // Add this inside the switch block in buildAllReplacements
         case 'mauContent':
         case 'lsContent':
         case 'ceContent':
           processInsights(parameters, replacements);
           break;
-
         case 'date':
         case 'logoUrl':
         case 'imageUrl':
@@ -550,6 +614,36 @@ function buildAllReplacements(parameters) {
         case 'date3':
         case 'date4':
         case 'date5':
+        case 'key1':
+        case 'key2':
+        case 'key3':
+        case 'key4':
+        case 'key5':
+        case 'custOwner1':
+        case 'custOwner2':
+        case 'custOwner3':
+        case 'custOwner4':
+        case 'custOwner5':
+        case 'doceboOwner1':
+        case 'doceboOwner2':
+        case 'doceboOwner3':
+        case 'doceboOwner4':
+        case 'doceboOwner5':
+        case 'priority1':
+        case 'priority2':
+        case 'priority3':
+        case 'priority4':
+        case 'priority5':
+        case 'status1':
+        case 'status2':
+        case 'status3':
+        case 'status4':
+        case 'status5':
+        case 'dueDate1':
+        case 'dueDate2':
+        case 'dueDate3':
+        case 'dueDate4':
+        case 'dueDate5':
         case 'milestone1':
         case 'milestone2':
         case 'milestone3':
@@ -565,6 +659,9 @@ function buildAllReplacements(parameters) {
         case 'metrics3':
         case 'metrics4':
         case 'metrics5':
+        case 'meetGoalOne':
+        case 'meetGoalTwo':
+        case 'meetGoalThree':
         case 'outcome1':
         case 'outcome2':
         case 'outcome3':
@@ -604,6 +701,8 @@ function buildAllReplacements(parameters) {
   
   return replacements;
 }
+
+
 
 function processInsights(parameters, replacements) {
   Logger.log(`📝 Processing insights content`);
@@ -655,6 +754,36 @@ function processSlideData(parameters, replacements) {
     'date3',
     'date4',
     'date5',
+    'key1',
+    'key2',
+    'key3',
+    'key4',
+    'key5',
+    'custOwner1',
+    'custOwner2',
+    'custOwner3',
+    'custOwner4',
+    'custOwner5',
+    'doceboOwner1',
+    'doceboOwner2',
+    'doceboOwner3',
+    'doceboOwner4',
+    'doceboOwner5',
+    'priority1',
+    'priority2',
+    'priority3',
+    'priority4',
+    'priority5',
+    'status1',
+    'status2',
+    'status3',
+    'status4',
+    'status5',
+    'dueDate1',
+    'dueDate2',
+    'dueDate3',
+    'dueDate4',
+    'dueDate5',
     'milestone1',
     'milestone2',
     'milestone3',
@@ -670,6 +799,9 @@ function processSlideData(parameters, replacements) {
     'metrics3',
     'metrics4',
     'metrics5',
+    'meetGoalOne',
+    'meetGoalTwo',
+    'meetGoalThree',
     'outcome1',
     'outcome2',
     'outcome3',
@@ -1683,30 +1815,27 @@ function renderCoordinateText(slide, element) {
     textBox.getFill().setTransparent();
     textBox.getBorder().setTransparent();
     
-    // Enhanced listItems handling - support array, JSON string, AND HTML string
+    // --- FONT LOGIC START ---
+    // Define which font to use based on font size (e.g., if > 18, it's a heading)
+    const headingThreshold = 20; 
+    const isHeading = (element.fontSize >= headingThreshold);
+    const selectedFont = isHeading ? 'Special Gothic Expanded One' : 'Figtree';
+    // --- FONT LOGIC END ---
+
     let listItems = element.listItems;
     
-    // If listItems is a string, try to parse it
     if (typeof listItems === 'string') {
       const trimmed = listItems.trim();
-      
-      // Check if it's JSON array
       if (trimmed.startsWith('[')) {
         try {
           listItems = JSON.parse(listItems);
-          Logger.log(`📝 Parsed listItems from JSON string: ${listItems.length} items`);
         } catch (parseError) {
-          Logger.log(`⚠️ Failed to parse listItems JSON: ${parseError.toString()}`);
           listItems = [];
         }
-      }
-      // Check if it's HTML (starts with < but not [)
-      else if (trimmed.startsWith('<')) {
+      } else if (trimmed.startsWith('<')) {
         try {
           listItems = parseHtmlListItems(listItems);
-          Logger.log(`📝 Parsed listItems from HTML: ${listItems.length} items`);
         } catch (htmlError) {
-          Logger.log(`⚠️ Failed to parse listItems HTML: ${htmlError.toString()}`);
           listItems = [];
         }
       }
@@ -1724,7 +1853,7 @@ function renderCoordinateText(slide, element) {
       
       const textStyle = textBox.getText().getTextStyle()
         .setFontSize(element.fontSize)
-        .setFontFamily('Figtree')
+        .setFontFamily(selectedFont) // Applied dynamic font
         .setForegroundColor(element.color);
       
       if (element.fontWeight === 'bold') {
@@ -1738,12 +1867,12 @@ function renderCoordinateText(slide, element) {
         .setIndentStart(0)
         .setIndentEnd(0)
         .setIndentFirstLine(0)
-        .setLineSpacing(element.lineHeight || 1.15);  // Changed default to 1.0
+        .setLineSpacing(element.lineHeight || 1.15);
       
     } else {
       const textStyle = textBox.getText().getTextStyle()
         .setFontSize(element.fontSize)
-        .setFontFamily('Figtree')
+        .setFontFamily(selectedFont) // Applied dynamic font
         .setForegroundColor(element.color);
 
       if (element.autoScale) {
@@ -1784,11 +1913,10 @@ function renderCoordinateText(slide, element) {
         .setIndentEnd(0)
         .setIndentFirstLine(0);
       
-      // Add line height support for regular text
       if (element.lineHeight) {
         paragraphStyle.setLineSpacing(element.lineHeight);
       } else {
-        paragraphStyle.setLineSpacing(1.0);  // Default line height is 1.0
+        paragraphStyle.setLineSpacing(1.0);
       }
       
       if (element.textAlign) {
@@ -2164,6 +2292,7 @@ function renderCoordinateTable(slide, element, presentation) {
     
     Logger.log(`🔍 DEBUG: About to populate cells...`);
     
+
     // Populate and style cells
     dataArray.forEach((row, rowIndex) => {
       row.forEach((cellContent, colIndex) => {
@@ -2252,7 +2381,7 @@ function renderCoordinateShape(slide, element) {
     }
     
     const shape = slide.insertShape(shapeType);
-    
+
     shape
       .setLeft(element.x)
       .setTop(element.y)
@@ -2262,7 +2391,7 @@ function renderCoordinateShape(slide, element) {
     if (element.fill) {
       shape.getFill().setSolidFill(element.fill);
     }
-    
+
     if (element.borderColor) {
       const border = shape.getBorder();
       border.getLineFill().setSolidFill(element.borderColor);
