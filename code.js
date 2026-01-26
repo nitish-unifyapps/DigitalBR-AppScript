@@ -7,10 +7,10 @@ const CONFIG = {
   PRESENTATION_NAME: 'Business Review',
   //SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18' ] 
 
-  //SLIDE_TEMPLATES:['Slide17_OptimizationStrategyTable']
-  //SLIDE_TEMPLATES:[ 'Slide13_LearnerEngagement', 'Slide14_LearningSession', 'Slide15_ContentEffectiveness', 'Slide16_OptimizationAndSuccessPlan', 'Slide17_OptimizationStrategyTable', 'Slide17A_QuarterlySuccessPlanning', 'Slide18_Grazie','Slide19_Appendix' ] 
+  SLIDE_TEMPLATES:['Slide10_KeyStrategic']
+  //SLIDE_TEMPLATES:['Slide1_overview','Slide2_meetingGoals','Slide3_Agenda','Slide4_DoceboTeam','Slide5_ClientTeam','Slide6_ExecutiveSummary','Slide7_CurrentStateLearning','Slide8_LearningSolutionOverview','Slide9_PartnershipTimeline','Slide10_KeyStrategic','Slide11_UsageAndMetrics','Slide12_YourDoceboMetrics','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide16_OptimizationAndSuccessPlan','Slide17_OptimizationStrategyTable','Slide17A_QuarterlySuccessPlanning','Slide18_Grazie','Slide19_Appendix'] 
 
-  SLIDE_TEMPLATES:['Slide17_OptimizationStrategyTable']
+  //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
 };
 
 const SHEETS_CONFIG = {
@@ -19,7 +19,7 @@ const SHEETS_CONFIG = {
   CHART_SHEET_NAME: 'Charts'
 };
 
-const PLACEHOLDER_IMAGE_URL = 'https://qa-uploads.unifyapps.com/user-uploads/1/1750945211309/Screenshot_2025-06-26_at_7.09.45 PM.png';
+const PLACEHOLDER_IMAGE_URL = 'https://qa-uploads.unifyapps.com/user-uploads/1/1769178622241/profilePic.png';
 
 // Global variable to track chart count
 let chartCounter = 0;
@@ -124,6 +124,9 @@ function createCoordinateSlides() {
       "lookingValue": "<span style=\"font-size: 22px\">Planning certification migration for late 2026 with enhanced reporting</span>",
       "lsChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image13.png?response-content-disposition=attachment%3Bfilename%3D%22image13.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=97976b9f26a91a226b44163c6efa2af13fef786a9bfb5bc804bfa65843d907c6",
       "lsContent": "<ul><li><p><span style=\"font-size: 20px\">E Learning consistently accounts for over 85% of total learning time each month.</span></p></li><li><p><span style=\"font-size: 20px\">ILT time peaked in November 2024 at 819,540 min, then declined and stabilized around 500,000-700,000 min.</span></p></li><li><p><span style=\"font-size: 20px\">Total learning time was highest in September 2025 (6,738,540 min), mainly driven by E Learning.</span></p></li><li><p><span style=\"font-size: 20px\">A steady increase in E Learning time is observed from December 2024 to September 2025.</span></p></li><li><p><span style=\"font-size: 20px\">CSM focus: Encourage more ILT engagement to balance learning modes.</span></p></li></ul>",
+      "KeyStrategicPrioritiesOutcomes": "",
+      "KeyStrategicPrioritiesTable" : "",
+      
       "mauChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image12.png?response-content-disposition=attachment%3Bfilename%3D%22image12.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=54375c838758ded705ed72db3f6aae12ebae645ce23ef4cc45d426e37a1baf79",
       "mauContent": "<ul><li><p><span style=\"font-size: 20px\">MAU surpassed the target in March, April, July, September, October, and November 2025.</span></p></li><li><p><span style=\"font-size: 20px\">A significant decline was observed in August 2025 with zero users.</span></p></li><li><p><span style=\"font-size: 20px\">MAU consistently missed the target in late 2024 and early 2025.</span></p></li><li><p><span style=\"font-size: 20px\">October 2025 showed a positive 18.53% growth from October 2024, aligning with a YoY change of 15.61%.</span></p></li><li><p><span style=\"font-size: 20px\">September 2025's plan saw an increase, yet the target was still surpassed.</span></p></li></ul>",
       "metrics1": "<span style=\"font-size: 17.5px\">Certification completion rate and compliance audit pass rate</span>",
@@ -674,6 +677,8 @@ function buildAllReplacements(parameters) {
         case 'outcome10':
         case 'outcome11':
         case 'outcome12':
+        case 'KeyStrategicPrioritiesOutcomes':
+        case 'KeyStrategicPrioritiesTable':
         case 'mauChart':
         case 'lsChart':
         case 'ceChart':
@@ -701,8 +706,6 @@ function buildAllReplacements(parameters) {
   
   return replacements;
 }
-
-
 
 function processInsights(parameters, replacements) {
   Logger.log(`📝 Processing insights content`);
@@ -814,6 +817,8 @@ function processSlideData(parameters, replacements) {
     'outcome10',
     'outcome11',
     'outcome12',
+    'KeyStrategicPrioritiesTable',
+    'KeyStrategicPrioritiesOutcomes',
     'mauChart',
     'lsChart',
     'ceChart',
