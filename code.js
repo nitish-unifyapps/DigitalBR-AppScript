@@ -7,10 +7,11 @@ const CONFIG = {
   PRESENTATION_NAME: 'Business Review',
   //SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18' ] 
 
-  SLIDE_TEMPLATES:['Slide10_KeyStrategic']
+  SLIDE_TEMPLATES:['Slide3_Agenda','Slide10_KeyStrategic','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide17_OptimizationStrategyTable']
   //SLIDE_TEMPLATES:['Slide1_overview','Slide2_meetingGoals','Slide3_Agenda','Slide4_DoceboTeam','Slide5_ClientTeam','Slide6_ExecutiveSummary','Slide7_CurrentStateLearning','Slide8_LearningSolutionOverview','Slide9_PartnershipTimeline','Slide10_KeyStrategic','Slide11_UsageAndMetrics','Slide12_YourDoceboMetrics','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide16_OptimizationAndSuccessPlan','Slide17_OptimizationStrategyTable','Slide17A_QuarterlySuccessPlanning','Slide18_Grazie','Slide19_Appendix'] 
 
   //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
+  //SLIDE_TEMPLATES:['check']
 };
 
 const SHEETS_CONFIG = {
@@ -50,7 +51,7 @@ function createCoordinateSlides() {
           "name": "<span style=\"font-weight: 700; font-size: 18px; line-height: 100%;\"><span style=\"font-weight: 700; font-size: 18px; line-height: 100%;\">Michael Elliott</span></span>"
         }
       ],
-      "ceChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image14.png?response-content-disposition=attachment%3Bfilename%3D%22image14.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=fd895e01ea28947aeab257dd614217cb1de2881ff356eb895fd02f32f4d97f90",
+      "ceChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image15.png?response-content-disposition=attachment%3Bfilename%3D%22image15.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRjBEAiAOGwOcVNNIplmhmq77BbLNsWyyt1976lN60pBRIzYEeAIgD5nDfmZQqPbVw8xzkQqSmRCRWa%2Fjj%2Fb5vVKc7dA%2Bl1MqvgUIVhAAGgw1NDY5MTgxMDYyODMiDCS%2BDPoZvsgCFD%2FfvSqbBerdgQLfzjhkw7q1R4JaCETMiu4FGCmN3x%2FKlZiErxjPWMllfYCwHlNMK9AConfmzrcQWHjTpXNaIEGZw1Hy37087eWoqlODj3rDz5NkqslY4NgxqjFb08EZojAKd%2F7WWJ4ZTDlgycvKbaI%2BQslnsYnfU2qZOWE9tBOPAPTp%2Bq2dUA2BQGknpvY1mD4dxjNVdXvVdfL1hSTYxUen%2FwuPEWp8Je3EhMD5ZrQRcftxSbt14bzb44uU%2FSxhtBbkFuiIUSJ4oC2Fcwk3XAZa3%2BIQ4RXs4KbKAJfF9vuj89IzvC4qH6AAtJoffNjhEwkm0EC8%2BNCss3C9PEZhhKNeu6o%2BXQTr1SegQ0E4RVX%2FihXkB1Sd5wQp8nUU2prw11sEicChrlmLroG8YVxq9mu28O60%2Fk0UsoSLGL%2Bfa%2FfAZv%2FYsK1vze1z9rh1JTImci4QBKnrBTyl%2Fh4Gks1apzXcYBf%2BF0kNYP3Y78BsgVnSBoeMCJahbGlhmONNpbI8jzhWNJDW1L9p8m1NbI7Z2Ici%2B9XnQ3e%2B9jfnQrWHxQF%2Bi%2Bb180mrkrPf7lSn8rQBnUsTN2vrwJOBAG58bmudorDAGGozYDq%2BmzSsV4lBJr%2F9AaFZUBUXEjq3rzoz3UQh1pOc6pTN5%2FRPPmkC7xiX%2B0MEESDEgLjEffIqd8tREna0PWBLg%2FnlChezRmAY0w32tjqeDguPqET0rZjn%2F9ILaXgy%2B2HeTPNxAFwfYOyyPcTbYiD4igktTaYb7Zr25wVroR0RSJFKbfHFu1CUABBcfysXX%2F8dOiQxr0FhWadt1ZOCumP42H%2B2PsZcBS9RQ5uX6Um0217P%2BleXxCyO34vtXEPiR8klfaSjcUKwna%2BwWcaukTGUoSEEa4lzTtPtMf4ckk4w5OfiywY6sgGzldfQWOiXbTBTtgJI7rXXearVpAlIIIeiji9pkaHxtxLL%2FUaJdCUoVZWi4QvEnNJxXTLNtrpgPfZBUHYhy11ShMOiopd50KE1qFbkdyTo9hfUI%2F1VBD2npL64o26PSLT3TC9GilsQ%2FGm9Sqk19b4u4L5e3kfy49g0wm1OVBDVU%2FvIzYX%2BvuFJxPTvmmJL66HMSlNbj3uSR7v2c3GJT8U0bH3UO0VBA1BhLZPDkVloxC2B&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260127T154745Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASVVJ4V5J6O%2F20260127%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=a86ec5ccc43b33bdb8c3597e48f64e2b446bcc635a3f01e433a0db56e7c797ee",
       "ceContent": "<ul><li><p><span style=\"font-size: 20px\">E Learning enrollments consistently outpace ILT enrollments each month.</span></p></li><li><p><span style=\"font-size: 20px\">Significant spikes in E Learning enrollments in September 2025 and January 2025.</span></p></li><li><p><span style=\"font-size: 20px\">ILT enrollments peaked in May 2025, then declined sharply in June 2025.</span></p></li><li><p><span style=\"font-size: 20px\">No enrollments recorded for Admin, Docebo, or Self methods throughout the period.</span></p></li><li><p><span style=\"font-size: 20px\">Total enrollments are driven almost entirely by E Learning and ILT channels.</span></p></li></ul>",
       "date": "3 Dec 2025",
       "date1": "<span style=\"font-size: 20px\">10 2024</span>",
@@ -122,12 +123,9 @@ function createCoordinateSlides() {
       "headerUrl": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image15.png?response-content-disposition=attachment%3Bfilename%3D%22image15.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=81524eff63f2fdddbbd4e5a7beb218112fda682ac6f8073cc9354af09b3fc38e",
       "logoUrl": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/685899851ad59c00018c53b1/picture",
       "lookingValue": "<span style=\"font-size: 22px\">Planning certification migration for late 2026 with enhanced reporting</span>",
-      "lsChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image13.png?response-content-disposition=attachment%3Bfilename%3D%22image13.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=97976b9f26a91a226b44163c6efa2af13fef786a9bfb5bc804bfa65843d907c6",
+      "lsChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image14.png?response-content-disposition=attachment%3Bfilename%3D%22image14.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRjBEAiAOGwOcVNNIplmhmq77BbLNsWyyt1976lN60pBRIzYEeAIgD5nDfmZQqPbVw8xzkQqSmRCRWa%2Fjj%2Fb5vVKc7dA%2Bl1MqvgUIVhAAGgw1NDY5MTgxMDYyODMiDCS%2BDPoZvsgCFD%2FfvSqbBerdgQLfzjhkw7q1R4JaCETMiu4FGCmN3x%2FKlZiErxjPWMllfYCwHlNMK9AConfmzrcQWHjTpXNaIEGZw1Hy37087eWoqlODj3rDz5NkqslY4NgxqjFb08EZojAKd%2F7WWJ4ZTDlgycvKbaI%2BQslnsYnfU2qZOWE9tBOPAPTp%2Bq2dUA2BQGknpvY1mD4dxjNVdXvVdfL1hSTYxUen%2FwuPEWp8Je3EhMD5ZrQRcftxSbt14bzb44uU%2FSxhtBbkFuiIUSJ4oC2Fcwk3XAZa3%2BIQ4RXs4KbKAJfF9vuj89IzvC4qH6AAtJoffNjhEwkm0EC8%2BNCss3C9PEZhhKNeu6o%2BXQTr1SegQ0E4RVX%2FihXkB1Sd5wQp8nUU2prw11sEicChrlmLroG8YVxq9mu28O60%2Fk0UsoSLGL%2Bfa%2FfAZv%2FYsK1vze1z9rh1JTImci4QBKnrBTyl%2Fh4Gks1apzXcYBf%2BF0kNYP3Y78BsgVnSBoeMCJahbGlhmONNpbI8jzhWNJDW1L9p8m1NbI7Z2Ici%2B9XnQ3e%2B9jfnQrWHxQF%2Bi%2Bb180mrkrPf7lSn8rQBnUsTN2vrwJOBAG58bmudorDAGGozYDq%2BmzSsV4lBJr%2F9AaFZUBUXEjq3rzoz3UQh1pOc6pTN5%2FRPPmkC7xiX%2B0MEESDEgLjEffIqd8tREna0PWBLg%2FnlChezRmAY0w32tjqeDguPqET0rZjn%2F9ILaXgy%2B2HeTPNxAFwfYOyyPcTbYiD4igktTaYb7Zr25wVroR0RSJFKbfHFu1CUABBcfysXX%2F8dOiQxr0FhWadt1ZOCumP42H%2B2PsZcBS9RQ5uX6Um0217P%2BleXxCyO34vtXEPiR8klfaSjcUKwna%2BwWcaukTGUoSEEa4lzTtPtMf4ckk4w5OfiywY6sgGzldfQWOiXbTBTtgJI7rXXearVpAlIIIeiji9pkaHxtxLL%2FUaJdCUoVZWi4QvEnNJxXTLNtrpgPfZBUHYhy11ShMOiopd50KE1qFbkdyTo9hfUI%2F1VBD2npL64o26PSLT3TC9GilsQ%2FGm9Sqk19b4u4L5e3kfy49g0wm1OVBDVU%2FvIzYX%2BvuFJxPTvmmJL66HMSlNbj3uSR7v2c3GJT8U0bH3UO0VBA1BhLZPDkVloxC2B&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260127T154745Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASVVJ4V5J6O%2F20260127%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=3b4075dd65d4a89e7f6aac4c4bfc1b266774a198c67b350da8ca16e834bb4071",
       "lsContent": "<ul><li><p><span style=\"font-size: 20px\">E Learning consistently accounts for over 85% of total learning time each month.</span></p></li><li><p><span style=\"font-size: 20px\">ILT time peaked in November 2024 at 819,540 min, then declined and stabilized around 500,000-700,000 min.</span></p></li><li><p><span style=\"font-size: 20px\">Total learning time was highest in September 2025 (6,738,540 min), mainly driven by E Learning.</span></p></li><li><p><span style=\"font-size: 20px\">A steady increase in E Learning time is observed from December 2024 to September 2025.</span></p></li><li><p><span style=\"font-size: 20px\">CSM focus: Encourage more ILT engagement to balance learning modes.</span></p></li></ul>",
-      "KeyStrategicPrioritiesOutcomes": "",
-      "KeyStrategicPrioritiesTable" : "",
-      
-      "mauChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image12.png?response-content-disposition=attachment%3Bfilename%3D%22image12.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=54375c838758ded705ed72db3f6aae12ebae645ce23ef4cc45d426e37a1baf79",
+      "mauChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image13.png?response-content-disposition=attachment%3Bfilename%3D%22image13.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRjBEAiAOGwOcVNNIplmhmq77BbLNsWyyt1976lN60pBRIzYEeAIgD5nDfmZQqPbVw8xzkQqSmRCRWa%2Fjj%2Fb5vVKc7dA%2Bl1MqvgUIVhAAGgw1NDY5MTgxMDYyODMiDCS%2BDPoZvsgCFD%2FfvSqbBerdgQLfzjhkw7q1R4JaCETMiu4FGCmN3x%2FKlZiErxjPWMllfYCwHlNMK9AConfmzrcQWHjTpXNaIEGZw1Hy37087eWoqlODj3rDz5NkqslY4NgxqjFb08EZojAKd%2F7WWJ4ZTDlgycvKbaI%2BQslnsYnfU2qZOWE9tBOPAPTp%2Bq2dUA2BQGknpvY1mD4dxjNVdXvVdfL1hSTYxUen%2FwuPEWp8Je3EhMD5ZrQRcftxSbt14bzb44uU%2FSxhtBbkFuiIUSJ4oC2Fcwk3XAZa3%2BIQ4RXs4KbKAJfF9vuj89IzvC4qH6AAtJoffNjhEwkm0EC8%2BNCss3C9PEZhhKNeu6o%2BXQTr1SegQ0E4RVX%2FihXkB1Sd5wQp8nUU2prw11sEicChrlmLroG8YVxq9mu28O60%2Fk0UsoSLGL%2Bfa%2FfAZv%2FYsK1vze1z9rh1JTImci4QBKnrBTyl%2Fh4Gks1apzXcYBf%2BF0kNYP3Y78BsgVnSBoeMCJahbGlhmONNpbI8jzhWNJDW1L9p8m1NbI7Z2Ici%2B9XnQ3e%2B9jfnQrWHxQF%2Bi%2Bb180mrkrPf7lSn8rQBnUsTN2vrwJOBAG58bmudorDAGGozYDq%2BmzSsV4lBJr%2F9AaFZUBUXEjq3rzoz3UQh1pOc6pTN5%2FRPPmkC7xiX%2B0MEESDEgLjEffIqd8tREna0PWBLg%2FnlChezRmAY0w32tjqeDguPqET0rZjn%2F9ILaXgy%2B2HeTPNxAFwfYOyyPcTbYiD4igktTaYb7Zr25wVroR0RSJFKbfHFu1CUABBcfysXX%2F8dOiQxr0FhWadt1ZOCumP42H%2B2PsZcBS9RQ5uX6Um0217P%2BleXxCyO34vtXEPiR8klfaSjcUKwna%2BwWcaukTGUoSEEa4lzTtPtMf4ckk4w5OfiywY6sgGzldfQWOiXbTBTtgJI7rXXearVpAlIIIeiji9pkaHxtxLL%2FUaJdCUoVZWi4QvEnNJxXTLNtrpgPfZBUHYhy11ShMOiopd50KE1qFbkdyTo9hfUI%2F1VBD2npL64o26PSLT3TC9GilsQ%2FGm9Sqk19b4u4L5e3kfy49g0wm1OVBDVU%2FvIzYX%2BvuFJxPTvmmJL66HMSlNbj3uSR7v2c3GJT8U0bH3UO0VBA1BhLZPDkVloxC2B&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260127T154745Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASVVJ4V5J6O%2F20260127%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=629bf94191c16531a6241587f33df95fee4ec58c09693b18c6f6c4cc80c727b6",
       "mauContent": "<ul><li><p><span style=\"font-size: 20px\">MAU surpassed the target in March, April, July, September, October, and November 2025.</span></p></li><li><p><span style=\"font-size: 20px\">A significant decline was observed in August 2025 with zero users.</span></p></li><li><p><span style=\"font-size: 20px\">MAU consistently missed the target in late 2024 and early 2025.</span></p></li><li><p><span style=\"font-size: 20px\">October 2025 showed a positive 18.53% growth from October 2024, aligning with a YoY change of 15.61%.</span></p></li><li><p><span style=\"font-size: 20px\">September 2025's plan saw an increase, yet the target was still surpassed.</span></p></li></ul>",
       "metrics1": "<span style=\"font-size: 17.5px\">Certification completion rate and compliance audit pass rate</span>",
       "metrics2": "<span style=\"font-size: 17.5px\">Report generation time and data accuracy metrics</span>",
@@ -153,8 +151,8 @@ function createCoordinateSlides() {
       "outcome8": "<span style=\"font-size: 17.5px\">User Experience</span>",
       "outcome9": "<span style=\"font-size: 17.5px\">Cost Reduction</span>",
       "productValue": "<span style=\"font-size: 22px\">Learn LMS supporting mandatory learning and compliance requirements</span>",
-      "progressImg1": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image16.png?response-content-disposition=attachment%3Bfilename%3D%22image16.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=824cf09f8df8ab8d14c08459965b48530e12882bd663b9c8a67e93d5bd692af7",
-      "progressImg2": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image17.png?response-content-disposition=attachment%3Bfilename%3D%22image17.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=6b468371bba81bd4b0001da2376ff6614f3cd173304e98c381743ea297c7dcab",
+      "progressImg1": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image17.png?response-content-disposition=attachment%3Bfilename%3D%22image17.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRjBEAiAOGwOcVNNIplmhmq77BbLNsWyyt1976lN60pBRIzYEeAIgD5nDfmZQqPbVw8xzkQqSmRCRWa%2Fjj%2Fb5vVKc7dA%2Bl1MqvgUIVhAAGgw1NDY5MTgxMDYyODMiDCS%2BDPoZvsgCFD%2FfvSqbBerdgQLfzjhkw7q1R4JaCETMiu4FGCmN3x%2FKlZiErxjPWMllfYCwHlNMK9AConfmzrcQWHjTpXNaIEGZw1Hy37087eWoqlODj3rDz5NkqslY4NgxqjFb08EZojAKd%2F7WWJ4ZTDlgycvKbaI%2BQslnsYnfU2qZOWE9tBOPAPTp%2Bq2dUA2BQGknpvY1mD4dxjNVdXvVdfL1hSTYxUen%2FwuPEWp8Je3EhMD5ZrQRcftxSbt14bzb44uU%2FSxhtBbkFuiIUSJ4oC2Fcwk3XAZa3%2BIQ4RXs4KbKAJfF9vuj89IzvC4qH6AAtJoffNjhEwkm0EC8%2BNCss3C9PEZhhKNeu6o%2BXQTr1SegQ0E4RVX%2FihXkB1Sd5wQp8nUU2prw11sEicChrlmLroG8YVxq9mu28O60%2Fk0UsoSLGL%2Bfa%2FfAZv%2FYsK1vze1z9rh1JTImci4QBKnrBTyl%2Fh4Gks1apzXcYBf%2BF0kNYP3Y78BsgVnSBoeMCJahbGlhmONNpbI8jzhWNJDW1L9p8m1NbI7Z2Ici%2B9XnQ3e%2B9jfnQrWHxQF%2Bi%2Bb180mrkrPf7lSn8rQBnUsTN2vrwJOBAG58bmudorDAGGozYDq%2BmzSsV4lBJr%2F9AaFZUBUXEjq3rzoz3UQh1pOc6pTN5%2FRPPmkC7xiX%2B0MEESDEgLjEffIqd8tREna0PWBLg%2FnlChezRmAY0w32tjqeDguPqET0rZjn%2F9ILaXgy%2B2HeTPNxAFwfYOyyPcTbYiD4igktTaYb7Zr25wVroR0RSJFKbfHFu1CUABBcfysXX%2F8dOiQxr0FhWadt1ZOCumP42H%2B2PsZcBS9RQ5uX6Um0217P%2BleXxCyO34vtXEPiR8klfaSjcUKwna%2BwWcaukTGUoSEEa4lzTtPtMf4ckk4w5OfiywY6sgGzldfQWOiXbTBTtgJI7rXXearVpAlIIIeiji9pkaHxtxLL%2FUaJdCUoVZWi4QvEnNJxXTLNtrpgPfZBUHYhy11ShMOiopd50KE1qFbkdyTo9hfUI%2F1VBD2npL64o26PSLT3TC9GilsQ%2FGm9Sqk19b4u4L5e3kfy49g0wm1OVBDVU%2FvIzYX%2BvuFJxPTvmmJL66HMSlNbj3uSR7v2c3GJT8U0bH3UO0VBA1BhLZPDkVloxC2B&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260127T154745Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASVVJ4V5J6O%2F20260127%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=ee3e457ea29b66847eb9b16e8a3b72477856660c1d17a21e8542744fe800c3e4",
+      "slide10Img": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image9.png?response-content-disposition=attachment%3Bfilename%3D%22image9.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRjBEAiAOGwOcVNNIplmhmq77BbLNsWyyt1976lN60pBRIzYEeAIgD5nDfmZQqPbVw8xzkQqSmRCRWa%2Fjj%2Fb5vVKc7dA%2Bl1MqvgUIVhAAGgw1NDY5MTgxMDYyODMiDCS%2BDPoZvsgCFD%2FfvSqbBerdgQLfzjhkw7q1R4JaCETMiu4FGCmN3x%2FKlZiErxjPWMllfYCwHlNMK9AConfmzrcQWHjTpXNaIEGZw1Hy37087eWoqlODj3rDz5NkqslY4NgxqjFb08EZojAKd%2F7WWJ4ZTDlgycvKbaI%2BQslnsYnfU2qZOWE9tBOPAPTp%2Bq2dUA2BQGknpvY1mD4dxjNVdXvVdfL1hSTYxUen%2FwuPEWp8Je3EhMD5ZrQRcftxSbt14bzb44uU%2FSxhtBbkFuiIUSJ4oC2Fcwk3XAZa3%2BIQ4RXs4KbKAJfF9vuj89IzvC4qH6AAtJoffNjhEwkm0EC8%2BNCss3C9PEZhhKNeu6o%2BXQTr1SegQ0E4RVX%2FihXkB1Sd5wQp8nUU2prw11sEicChrlmLroG8YVxq9mu28O60%2Fk0UsoSLGL%2Bfa%2FfAZv%2FYsK1vze1z9rh1JTImci4QBKnrBTyl%2Fh4Gks1apzXcYBf%2BF0kNYP3Y78BsgVnSBoeMCJahbGlhmONNpbI8jzhWNJDW1L9p8m1NbI7Z2Ici%2B9XnQ3e%2B9jfnQrWHxQF%2Bi%2Bb180mrkrPf7lSn8rQBnUsTN2vrwJOBAG58bmudorDAGGozYDq%2BmzSsV4lBJr%2F9AaFZUBUXEjq3rzoz3UQh1pOc6pTN5%2FRPPmkC7xiX%2B0MEESDEgLjEffIqd8tREna0PWBLg%2FnlChezRmAY0w32tjqeDguPqET0rZjn%2F9ILaXgy%2B2HeTPNxAFwfYOyyPcTbYiD4igktTaYb7Zr25wVroR0RSJFKbfHFu1CUABBcfysXX%2F8dOiQxr0FhWadt1ZOCumP42H%2B2PsZcBS9RQ5uX6Um0217P%2BleXxCyO34vtXEPiR8klfaSjcUKwna%2BwWcaukTGUoSEEa4lzTtPtMf4ckk4w5OfiywY6sgGzldfQWOiXbTBTtgJI7rXXearVpAlIIIeiji9pkaHxtxLL%2FUaJdCUoVZWi4QvEnNJxXTLNtrpgPfZBUHYhy11ShMOiopd50KE1qFbkdyTo9hfUI%2F1VBD2npL64o26PSLT3TC9GilsQ%2FGm9Sqk19b4u4L5e3kfy49g0wm1OVBDVU%2FvIzYX%2BvuFJxPTvmmJL66HMSlNbj3uSR7v2c3GJT8U0bH3UO0VBA1BhLZPDkVloxC2B&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260127T154745Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASVVJ4V5J6O%2F20260127%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=e6c06f28dc9b982d700cc04a85d92ab0314604009ce317f0704b49f130940d67",
       "progressImg3": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image18.png?response-content-disposition=attachment%3Bfilename%3D%22image18.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=216e12060f957b4cb3200179587d29d80cc6fccfe5e6e0cc47c1b9650e0e30e4",
       "progressImg4": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image19.png?response-content-disposition=attachment%3Bfilename%3D%22image19.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHwaCmFwLXNvdXRoLTEiSDBGAiEA8GWWVsTn5Tv0uJpBrljJWQ0ZOXDlmJ%2BbwbrAI5jAGmoCIQDRdtB2QkhnQwu9YmQlVvvFEno7tvUvYsF1ektnn4VyBCq%2BBQhFEAAaDDU0NjkxODEwNjI4MyIMNsS98pbvFUwEMMt0KpsF1MJtKam7Lhp5LyCQIpkrxfaGAq523x9WIAUpGQw2Bry%2FrzmKiFCdOj8LtdmogIhoqY%2BrtYqb%2B0NWDZpnyeqzathGIZE87Y0g3%2B%2FXdOhK7XNHzysqDOyMgQrTZtowuQHvL7AvBFy6F0mErzTlMkcQIu7szMci5a7kkgtRk4lxEoG16cVT2eWbsLkAY9qNzFJIpRr%2F%2FwaCYvXuIeS2p0gw0%2BJxgWPxN5H5jBNkxgMXaRPCFisEJ2tWHqPId4PZ2L2gAYZRNznIxA5DmJGZ2m7MpwP4q%2BD4bGOZDR67FcPG7XjQMJjrF8SPu1c6eo9CJIum6yLMJsiHDCgkseyt5GDt5zacR6XVjpyTlc0TMc2JDD%2F6LUFCA1%2B2tOWFYRFdWjQrbQpSZ23R2kF3ylfeKBRDhKGt2Fq72Bdmbg%2FPO2lhAQN8kR12JJ%2BpxM2YB2ukJCfz5GsGn2Bczyzp0ls3sQF%2Bl%2FEPX4nqbWeC5S8sY1A87USa7UCbYmU7QToGZ9omJ3voXQ84jLH2UnaBH6s5TYmsrQ3o2QJW5a7MstYAOmVqsT17mVgRq4QiEHgJcxgxzVTxJjl2049Ij3%2Fp7gE8L6j8bqv1cScdbDDkc%2Fse8hRcA90bv%2BHNMjqUrMzOE3c46ISBoYV7A9KuyYW0Q5MDRD0ZA3FBzzL4Qpn5JqTkSspy%2FFLPqX1Lvjcj%2F5QXeZ3XUdsJKZOAs7VQCXv%2BQjh0g2JGVWvPyWM1qPOMDHECHJG60BFMB%2BtNqiPIWsdLrI4AHPDEqp7uRvES6%2BzmIviYw8xTLrZziXW9rXehz51IxzLbFL9Lf161YYBnwlIb2eVFlpADpsxNgdWgH1xIE8G3gBLQJzd7xROR%2FbRiuuCUS93Duk0saTICLCGFXsS3aDDh5cXJBjqwATMl0CWzyn%2BxNWieL5mPFQ0WOKvKbnulv8%2F%2BOi2Gg7iMQ13lvkokO79rvK6spZ2NygVkBMTQrls6lVSbJmd9lVhxHiqkCvLO2JoIxxSFKASVxHkFu81lJoIUlv9%2FJy%2FeZPshtHhVeYeH5W%2FBQ7DthP3Mpxnl4hWZDH0BN8%2BhoRPmfJpcektCDZuFhjmY%2FlnJnTCiF03N%2FDWR2EwSbO70zK%2BWdJr3HjioGYekcyuwAfYH&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251204T121216Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7BSU7TYK%2F20251204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=86fdc44f66e5b5175e2cf849394ab909457ea56a6f34289309245d8a88091f1e",
       "renewalDate": "2028-08-09",
@@ -677,14 +675,12 @@ function buildAllReplacements(parameters) {
         case 'outcome10':
         case 'outcome11':
         case 'outcome12':
-        case 'KeyStrategicPrioritiesOutcomes':
-        case 'KeyStrategicPrioritiesTable':
         case 'mauChart':
         case 'lsChart':
         case 'ceChart':
         case 'headerUrl':
         case 'progressImg1':
-        case 'progressImg2':
+        case 'slide10Img':
         case 'progressImg3':
         case 'progressImg4':
           processSlideData(parameters, replacements);
@@ -817,14 +813,12 @@ function processSlideData(parameters, replacements) {
     'outcome10',
     'outcome11',
     'outcome12',
-    'KeyStrategicPrioritiesTable',
-    'KeyStrategicPrioritiesOutcomes',
     'mauChart',
     'lsChart',
     'ceChart',
     'headerUrl',
     'progressImg1',
-    'progressImg2',
+    'slide10Img',
     'progressImg3',
     'progressImg4'
   ];
@@ -1765,6 +1759,11 @@ function renderCoordinateElement(slide, element, slideName, presentation) {
     case 'text':
       renderCoordinateText(slide, element);
       break;
+    
+    // --- ADD THIS CASE ---
+    case 'arcRectangle':
+      renderCoordinateArcRectangle(slide, element);
+      break;
       
     case 'rectangle':
       renderCoordinateRectangle(slide, element);
@@ -1816,9 +1815,52 @@ function renderCoordinateText(slide, element) {
       .setTop(element.y)
       .setWidth(element.width)
       .setHeight(element.height);
+    
+    //"Fill": "#FFC0CB","BACKGROUND": "#06065D", to apply background on the text.
 
-    textBox.getFill().setTransparent();
-    textBox.getBorder().setTransparent();
+
+    // 3. MEASURE THE BOX (Google Slides calculates the final height 'h' here)
+    const x = textBox.getLeft();
+    const y = textBox.getTop();
+    const w = textBox.getWidth();
+    const h = textBox.getHeight(); 
+
+    // 4. BORDER CONFIGURATION
+    const weight = element.borderWeight || 1.5;
+    const color = element.borderColor || "#000000"; // Dynamic color per box
+
+    // DRAW LEFT BORDER
+    if (element.leftBorder) {
+      const line = slide.insertLine(SlidesApp.LineCategory.STRAIGHT, x, y, x, y + h);
+      line.getLineFill().setSolidFill(color);
+      line.setWeight(weight);
+      // Indent text so it doesn't touch the line
+      textRange.getParagraphStyle().setIndentStart(10).setIndentFirstLine(10);
+    }
+
+    // DRAW RIGHT BORDER
+    if (element.rightBorder) {
+      const line = slide.insertLine(SlidesApp.LineCategory.STRAIGHT, x + w, y, x + w, y + h);
+      line.getLineFill().setSolidFill(color);
+      line.setWeight(weight);
+    }
+
+    // DRAW BOTTOM BORDER
+    if (element.bottomBorder) {
+      const line = slide.insertLine(SlidesApp.LineCategory.STRAIGHT, x, y + h, x + w, y + h);
+      line.getLineFill().setSolidFill(color);
+      line.setWeight(weight);
+    }
+
+    // 5. BACKGROUND & TRANSPARENCY
+    // Use the keys from your JSON (BACKGROUND or backgroundColor)
+    const bgColor = element.BACKGROUND || element.backgroundColor || element.Fill;
+    if (bgColor) {
+      textBox.getFill().setSolidFill(bgColor);
+    } else {
+      textBox.getFill().setTransparent();
+    }
+    
     
     // --- FONT LOGIC START ---
     // Define which font to use based on font size (e.g., if > 18, it's a heading)
@@ -1976,6 +2018,49 @@ function parseHtmlListItems(htmlString) {
   return items;
 }
 
+function renderCoordinateArcRectangle(slide, element) {
+  try {
+    Logger.log(`🟦 Rendering Arc Rectangle at (${element.x}, ${element.y})`);
+    
+    // 1. Insert the Rounded Rectangle shape
+    const shape = slide.insertShape(SlidesApp.ShapeType.ROUND_RECTANGLE);
+    
+    // 2. Set dimensions and position
+    shape.setLeft(element.x)
+         .setTop(element.y)
+         .setWidth(element.width)
+         .setHeight(element.height);
+    
+    // 3. Set Background Fill Color
+    if (element.fill) {
+      shape.getFill().setSolidFill(element.fill);
+    } else {
+      shape.getFill().setTransparent();
+    }
+
+    // 4. Set Border (optional)
+    if (element.borderColor) {
+      shape.getBorder().getLineFill().setSolidFill(element.borderColor);
+      shape.getBorder().setWeight(element.borderWeight || 1);
+    } else {
+      shape.getBorder().setTransparent();
+    }
+
+    // 5. SET THE ARC RADIUS (The curvature)
+    // The value ranges from 0.0 to 0.5 (0.5 is a full pill shape)
+    if (element.arcRadius !== undefined) {
+      const adjustments = shape.getAdjustments();
+      if (adjustments.length > 0) {
+        adjustments[0].setValue(element.arcRadius);
+      }
+    }
+    
+    Logger.log(`✅ Arc Rectangle rendered successfully`);
+    
+  } catch (error) {
+    Logger.log(`⚠️ Error rendering arc rectangle: ${error.toString()}`);
+  }
+}
 
 function renderCoordinateRectangle(slide, element) {
   try {
@@ -2381,6 +2466,11 @@ function renderCoordinateShape(slide, element) {
       case 'roundRectangle':
         shapeType = SlidesApp.ShapeType.ROUND_RECTANGLE;
         break;
+      
+      case 'arcRectangle':
+        shapeType = SlidesApp.ShapeType.ARC_RECTANGLE;
+        break;
+
       default:
         shapeType = SlidesApp.ShapeType.RECTANGLE;
     }
