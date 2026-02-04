@@ -10,7 +10,7 @@ const CONFIG = {
   //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
   //SLIDE_TEMPLATES:['Slide1_overview','Slide2_meetingGoals','Slide3_Agenda','Slide4_DoceboTeam','Slide5_ClientTeam','Slide6_ExecutiveSummary','Slide7_CurrentStateLearning','Slide8_LearningSolutionOverview','Slide9_PartnershipTimeline','Slide10_KeyStrategic','Slide11_UsageAndMetrics','Slide12_YourDoceboMetrics','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide16_OptimizationAndSuccessPlan','Slide17_OptimizationStrategyTable','Slide17A_QuarterlySuccessPlanning','Slide18_Grazie','Slide19_Appendix'] 
 
-  SLIDE_TEMPLATES:['Slide9_PartnershipTimeline'] 
+  SLIDE_TEMPLATES:['Slide4_DoceboTeam','Slide5_ClientTeam'] 
 
   //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
   //SLIDE_TEMPLATES:['check']
@@ -22,7 +22,7 @@ const SHEETS_CONFIG = {
   CHART_SHEET_NAME: 'Charts'
 };
 
-const PLACEHOLDER_IMAGE_URL = 'https://qa-uploads.unifyapps.com/user-uploads/1/1769178622241/profilePic.png';
+const PLACEHOLDER_IMAGE_URL = 'https://qa-uploads.unifyapps.com/user-uploads/1/1770225007615/Screenshot_2026-02-04_at_10.39.xn--46PM-1d7a.png';
 
 // Global variable to track chart count
 let chartCounter = 0;
@@ -2610,10 +2610,10 @@ function renderCoordinateTeamMember(slide, element) {
       // Insert profile image as rounded rectangle
       const profileImage = slide.insertImage(profileImageUrl);
       profileImage
-        .setLeft(element.x + 8) // 8px padding from left edge of card
-        .setTop(element.y + 8)  // 8px padding from top edge of card
-        .setWidth(64)           // Square image
-        .setHeight(64);
+        .setLeft(element.x + 11) // 8px padding from left edge of card
+        .setTop(element.y + 6)  // 8px padding from top edge of card
+        .setWidth(74)           // Square image
+        .setHeight(71);
       
       Logger.log(`   Profile picture inserted for ${element.name}`);
     } catch (imageError) {
@@ -2622,10 +2622,10 @@ function renderCoordinateTeamMember(slide, element) {
       // Create placeholder rounded rectangle if image fails
       const placeholderRect = slide.insertShape(SlidesApp.ShapeType.ROUND_RECTANGLE);
       placeholderRect
-        .setLeft(element.x + 8)
-        .setTop(element.y + 8)
-        .setWidth(64)
-        .setHeight(64);
+        .setLeft(element.x + 13)
+        .setTop(element.y + 5)
+        .setWidth(74)
+        .setHeight(74);
       placeholderRect.getFill().setSolidFill('#e0e0e0');
       placeholderRect.getBorder().setTransparent();
       
@@ -2651,8 +2651,8 @@ function renderCoordinateTeamMember(slide, element) {
     // Name text (bold, positioned to the right of the image)
     const nameText = slide.insertTextBox(cleanName);
     nameText
-      .setLeft(element.x + 80) // Start after image (8 + 64 + 8 spacing)
-      .setTop(element.y + 13)  // Vertically centered in upper part of card -2
+      .setLeft(element.x + 101) // Start after image (8 + 64 + 8 spacing)
+      .setTop(element.y + 19)  // Vertically centered in upper part of card -2
       .setWidth(element.width - 50) // Remaining width of card minus padding
       .setHeight(16);
     
@@ -2671,8 +2671,8 @@ function renderCoordinateTeamMember(slide, element) {
     // Membership/Role text (smaller font, positioned below name)
     const membershipText = slide.insertTextBox(element.membership);
     membershipText
-      .setLeft(element.x + 80) // Same x as name
-      .setTop(element.y + 34)  // Below the name
+      .setLeft(element.x + 101) // Same x as name
+      .setTop(element.y + 35)  // Below the name
       .setWidth(element.width - 50) // Same width as name
       .setHeight(20);
     
@@ -2680,7 +2680,7 @@ function renderCoordinateTeamMember(slide, element) {
     membershipText.getBorder().setTransparent();
     
     const membershipStyle = membershipText.getText().getTextStyle()
-      .setFontSize(10)
+      .setFontSize(12)
       .setFontFamily('Figtree')
       .setForegroundColor('#666666');
     
