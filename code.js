@@ -5,12 +5,12 @@
 
 const CONFIG = {
   PRESENTATION_NAME: 'Business Review',
-  //SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18' ] 
+  SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18','Slide19'] 
 
   //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
   //SLIDE_TEMPLATES:['Slide1_overview','Slide2_meetingGoals','Slide3_Agenda','Slide4_DoceboTeam','Slide5_ClientTeam','Slide6_ExecutiveSummary','Slide7_CurrentStateLearning','Slide8_LearningSolutionOverview','Slide9_PartnershipTimeline','Slide10_KeyStrategic','Slide11_UsageAndMetrics','Slide12_YourDoceboMetrics','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide16_OptimizationAndSuccessPlan','Slide17_OptimizationStrategyTable','Slide17A_QuarterlySuccessPlanning','Slide18_Grazie','Slide19_Appendix'] 
 
-  SLIDE_TEMPLATES:['Slide4_DoceboTeam','Slide5_ClientTeam'] 
+  //SLIDE_TEMPLATES:['Slide4_DoceboTeam','Slide5_ClientTeam'] 
 
   //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
   //SLIDE_TEMPLATES:['check']
