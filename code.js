@@ -5,15 +5,16 @@
 
 const CONFIG = {
   PRESENTATION_NAME: 'Business Review',
-  SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18','Slide19'] 
+  SLIDE_TEMPLATES:['Slide1', 'Slide2', 'Slide3', 'Slide4', 'Slide5', 'Slide6', 'Slide7', 'Slide8', 'Slide9', 'Slide10', 'Slide11', 'Slide12', 'Slide13', 'Slide14', 'Slide15', 'Slide16', 'Slide17', 'Slide17A', 'Slide18' ] 
 
-  //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
-  //SLIDE_TEMPLATES:['Slide1_overview','Slide2_meetingGoals','Slide3_Agenda','Slide4_DoceboTeam','Slide5_ClientTeam','Slide6_ExecutiveSummary','Slide7_CurrentStateLearning','Slide8_LearningSolutionOverview','Slide9_PartnershipTimeline','Slide10_KeyStrategic','Slide11_UsageAndMetrics','Slide12_YourDoceboMetrics','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide16_OptimizationAndSuccessPlan','Slide17_OptimizationStrategyTable','Slide17A_QuarterlySuccessPlanning','Slide18_Grazie','Slide19_Appendix'] 
+  //SLIDE_TEMPLATES:['Slide3_Agenda','Slide4_DoceboTeam','Slide5_ClientTeam','Slide10_KeyStrategic','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide16','Slide17','Slide19_OptimizationStrategyTable']
+  //SLIDE_TEMPLATES:['Slide1_overview','Slide2_meetingGoals','Slide3_Agenda','Slide4_DoceboTeam','Slide5_ClientTeam','Slide6_ExecutiveSummary','Slide7_CurrentStateLearning','Slide8_LearningSolutionOverview','Slide9_PartnershipTimeline','Slide10_KeyStrategic','Slide11_UsageAndMetrics','Slide12_YourDoceboMetrics','Slide13_LearnerEngagement','Slide14_LearningSession', 'Slide15_ContentEffectiveness','Slide16','Slide17','Slide18_OptimizationAndSuccessPlan','Slide19_OptimizationStrategyTable','Slide20_QuarterlySuccessPlanning','Slide21_Grazie','Slide22_Appendix'] 
 
-  //SLIDE_TEMPLATES:['Slide4_DoceboTeam','Slide5_ClientTeam'] 
+  //SLIDE_TEMPLATES:['Slide16_OptimizationAndSuccessPlan','Slide18_Grazie','Slide19_Appendix'] 
 
-  //SLIDE_TEMPLATES:['Slide17A_QuarterlySuccessPlanning']
-  //SLIDE_TEMPLATES:['check']
+
+  //SLIDE_TEMPLATES:['Slide14_LearningSession']
+  //SLIDE_TEMPLATES:['Slide18_OptimizationAndSuccessPlan','Slide19_OptimizationStrategyTable','Slide20_QuarterlySuccessPlanning','Slide21_Grazie','Slide22_Appendix']
 };
 
 const SHEETS_CONFIG = {
@@ -30,157 +31,160 @@ let chartCounter = 0;
 function createCoordinateSlides() {
 
   let parameters = {
-      "accountName": "Aetrex Worldwide, Inc.",
-      "accountTeamArray": [
-        {
-          "area": "Enter Area Here",
-          "impact": "Enter Impact Here",
-          "membership": "Enter Role Here",
-          "name": "Enter Name Here",
-          "stage": "Enter Stage Here",
-          "useCase": "Enter Use Case Here"
-        }
-      ],
-      "ceChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image15.png?response-content-disposition=attachment%3Bfilename%3D%22image15.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEgaCmFwLXNvdXRoLTEiRjBEAiBWKmUcXHmKTQzwsmzoTvYO6BJCmm%2BPaNBbUEwya4Vd%2BAIgMj9AoF%2FheVEXNJfnru4XVNuUU3yJO5Z41Ujz2w2KQrAqvwUIERAAGgw1NDY5MTgxMDYyODMiDOwh2B4AO8t%2FoO1LeSqcBb9k8ksXZc7%2BMF7PUJgeEz1Ew7pdyYGeUBo1eCW71jnUBsmU%2FpscTNUWr7588q7ZswgsGINMCpbB9EiSFuNEUa5vzaVxK7pyNXXcvUqkg5FowlQzTtWWyaQukejw3Ku2J2%2BybiVKQHR8DAq982HfG7N0vG6SjE7%2Fmg1HTTU%2FleHEow%2BLD7HreTVe2wJIQnIKMaSHLKstLtwAQ%2F8KII2dz75g05pzJszDZyZnMxEVX1ZVeE0u85LRDdvvK3Ga5Bw5R%2BVBabPzC%2BgXEvhq7gj9tP5Xav9jnwgPSy1vCOQgcu2QkEK0K6DB6M56MqMsF4jxQkPEsNEKuPxDaWYZqkgPdjeUawoLWltMqrE8gLs1iIY2ZkYmkpyKKwfumQOPjg4Dqqr5F26JYz7fYgFS1b7SwN0jdDMYzSYlZnuaOFTReKE7TVkipwqE8DHLrCPeBsYkYSF2I6rC4GALIYq%2FquNg3Iqo8TbtkVaYwRE98JkmzOcnbVUOcZDvD96MAVQBrxPAN%2BuJT%2BctCibXd1tA8SzQAVUOPWAzx0U%2BLgC5fX3e61QUXT8xdRiCsSGcUD1gexaCmn3UQ0O6FKz7BC9N8fsOmdmFag4kKNo13ETaHqsy1bZFNMi%2FYmjObPDY0ogQl01k4nEY0pYM%2BgGfjRIGdK9Yn5iIns9d3MHN9g9weyLVL7rZ6EhQwMY00hx%2FA5W1CsIo%2BJzCkVc9OF%2B%2BMVBbjEFxMIgSKGW1OklFPbyFvsw2%2F6vN77Zt0U1CJcVLvf5xqPqWY0jY%2BY3Xd8VdRtRU9xhH%2FxOV1r%2BROjBMqkgHBpH0kRzE6jagBZVWHv46LEBS6bJp5H3xBsv9flfvxeUKHTAi10cUwpMXmrhQBz%2BERaNZqsK4kPFBOp7zpUJ%2BsWedMJvvi8wGOrIBToUA9hku3I0LSwWSq3niRC0x8A8oNz0v5xsSVijM2Xs29eGiZX0OdLmz%2BVSU0dp5fxI9pCaIhF2GSoJZHGJxU6J2kwkcYxeNP4IyYuKkQODOyEzBSlLnRtnivBCuoK0x0%2BsujkmOrRjUVfagSxaXF2UZ9fH2ZAU3t%2Bx8xhM4OfrmxmDYT7QQiC%2BZAk0YjI0ZIxB6AtQBVYQZ%2BZh451sQXcSzIut%2FStxRL%2B0VgNgiJoSTmw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260204T074618Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV4E5YK7WW%2F20260204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=8adf0b9103a934bcd34b72e5f8fa79c833a097d130b74453efff2babe83596a7",
-      "ceContent": "<ul><li><p><span style=\"font-size: 20px\">E-Learning is the only enrollment method utilized throughout the year.</span></p></li><li><p><span style=\"font-size: 20px\">June 2025 saw the highest e-learning enrollments at 1,056.</span></p></li><li><p><span style=\"font-size: 20px\">Significant drop in enrollments from June to July 2025.</span></p></li><li><p><span style=\"font-size: 20px\">No activity recorded for ILT, Self, Internal, Admin, or Docebo enrollments.</span></p></li><li><p><span style=\"font-size: 20px\">Recent months (November–December 2025) indicate declining engagement.</span></p></li></ul>",
-      "date": "3 Dec 2025",
-      "date1": "03-2025",
-      "date2": "06-2025",
-      "date3": "09-2025",
-      "date4": "12-2025",
-      "date5": "03-2026",
-      "doceboTeamArray": [
-        {
-          "Citations": "[2,3,4]",
-          "membership": "Account Manager",
-          "name": "Stephanie Sloss",
-          "profilePicture": "Unavailable"
-        },
-        {
-          "Citations": "[2,3,4]",
-          "membership": "Customer Success Manager",
-          "name": "CSM NA POOL",
-          "profilePicture": "Unavailable"
-        }
-      ],
-      "goal1": "Enhance sales enablement training effectiveness and engagement",
-      "goal2": "Optimize onboarding and professional development programs",
-      "goal3": "Expand customer education and certification programs",
-      "goal4": "Strengthen partner training and enablement initiatives",
-      "goal5": "Implement advanced learning analytics and reporting",
-      "headerUrl": "Enter Your Text Here",
-      "imageUrl": "https://t4.ftcdn.net/jpg/03/32/41/57/360_F_332415747_wgPEZYABPCoBC2MbbZMsK9NHEguootsb.jpg",
-      "logoUrl": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/6858c73b879649000191607d/picture",
-      "lookingValue": "Planning enhanced customer education initiatives and expanded partner training programs",
-      "lsChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image14.png?response-content-disposition=attachment%3Bfilename%3D%22image14.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEgaCmFwLXNvdXRoLTEiRjBEAiBWKmUcXHmKTQzwsmzoTvYO6BJCmm%2BPaNBbUEwya4Vd%2BAIgMj9AoF%2FheVEXNJfnru4XVNuUU3yJO5Z41Ujz2w2KQrAqvwUIERAAGgw1NDY5MTgxMDYyODMiDOwh2B4AO8t%2FoO1LeSqcBb9k8ksXZc7%2BMF7PUJgeEz1Ew7pdyYGeUBo1eCW71jnUBsmU%2FpscTNUWr7588q7ZswgsGINMCpbB9EiSFuNEUa5vzaVxK7pyNXXcvUqkg5FowlQzTtWWyaQukejw3Ku2J2%2BybiVKQHR8DAq982HfG7N0vG6SjE7%2Fmg1HTTU%2FleHEow%2BLD7HreTVe2wJIQnIKMaSHLKstLtwAQ%2F8KII2dz75g05pzJszDZyZnMxEVX1ZVeE0u85LRDdvvK3Ga5Bw5R%2BVBabPzC%2BgXEvhq7gj9tP5Xav9jnwgPSy1vCOQgcu2QkEK0K6DB6M56MqMsF4jxQkPEsNEKuPxDaWYZqkgPdjeUawoLWltMqrE8gLs1iIY2ZkYmkpyKKwfumQOPjg4Dqqr5F26JYz7fYgFS1b7SwN0jdDMYzSYlZnuaOFTReKE7TVkipwqE8DHLrCPeBsYkYSF2I6rC4GALIYq%2FquNg3Iqo8TbtkVaYwRE98JkmzOcnbVUOcZDvD96MAVQBrxPAN%2BuJT%2BctCibXd1tA8SzQAVUOPWAzx0U%2BLgC5fX3e61QUXT8xdRiCsSGcUD1gexaCmn3UQ0O6FKz7BC9N8fsOmdmFag4kKNo13ETaHqsy1bZFNMi%2FYmjObPDY0ogQl01k4nEY0pYM%2BgGfjRIGdK9Yn5iIns9d3MHN9g9weyLVL7rZ6EhQwMY00hx%2FA5W1CsIo%2BJzCkVc9OF%2B%2BMVBbjEFxMIgSKGW1OklFPbyFvsw2%2F6vN77Zt0U1CJcVLvf5xqPqWY0jY%2BY3Xd8VdRtRU9xhH%2FxOV1r%2BROjBMqkgHBpH0kRzE6jagBZVWHv46LEBS6bJp5H3xBsv9flfvxeUKHTAi10cUwpMXmrhQBz%2BERaNZqsK4kPFBOp7zpUJ%2BsWedMJvvi8wGOrIBToUA9hku3I0LSwWSq3niRC0x8A8oNz0v5xsSVijM2Xs29eGiZX0OdLmz%2BVSU0dp5fxI9pCaIhF2GSoJZHGJxU6J2kwkcYxeNP4IyYuKkQODOyEzBSlLnRtnivBCuoK0x0%2BsujkmOrRjUVfagSxaXF2UZ9fH2ZAU3t%2Bx8xhM4OfrmxmDYT7QQiC%2BZAk0YjI0ZIxB6AtQBVYQZ%2BZh451sQXcSzIut%2FStxRL%2B0VgNgiJoSTmw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260204T074618Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV4E5YK7WW%2F20260204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=53e83d1f9c428301af2bb3586d81a98e7db0717715056bd1e417df4526d9edf9",
-      "lsContent": "<ul><li><p><span style=\"font-size: 20px\">All learning time is from E Learning, with ILT time at zero throughout.</span></p></li><li><p><span style=\"font-size: 20px\">Peak learning time was in March 2025 at 44,160 minutes, then dropped in April 2025.</span></p></li><li><p><span style=\"font-size: 20px\">Consistent engagement above 30,000 minutes from May to December 2025, except in April 2025.</span></p></li><li><p><span style=\"font-size: 20px\">No learning time recorded for January 2026; trend declines after December 2025.</span></p></li></ul>",
-      "mauChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image13.png?response-content-disposition=attachment%3Bfilename%3D%22image13.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEgaCmFwLXNvdXRoLTEiRjBEAiBWKmUcXHmKTQzwsmzoTvYO6BJCmm%2BPaNBbUEwya4Vd%2BAIgMj9AoF%2FheVEXNJfnru4XVNuUU3yJO5Z41Ujz2w2KQrAqvwUIERAAGgw1NDY5MTgxMDYyODMiDOwh2B4AO8t%2FoO1LeSqcBb9k8ksXZc7%2BMF7PUJgeEz1Ew7pdyYGeUBo1eCW71jnUBsmU%2FpscTNUWr7588q7ZswgsGINMCpbB9EiSFuNEUa5vzaVxK7pyNXXcvUqkg5FowlQzTtWWyaQukejw3Ku2J2%2BybiVKQHR8DAq982HfG7N0vG6SjE7%2Fmg1HTTU%2FleHEow%2BLD7HreTVe2wJIQnIKMaSHLKstLtwAQ%2F8KII2dz75g05pzJszDZyZnMxEVX1ZVeE0u85LRDdvvK3Ga5Bw5R%2BVBabPzC%2BgXEvhq7gj9tP5Xav9jnwgPSy1vCOQgcu2QkEK0K6DB6M56MqMsF4jxQkPEsNEKuPxDaWYZqkgPdjeUawoLWltMqrE8gLs1iIY2ZkYmkpyKKwfumQOPjg4Dqqr5F26JYz7fYgFS1b7SwN0jdDMYzSYlZnuaOFTReKE7TVkipwqE8DHLrCPeBsYkYSF2I6rC4GALIYq%2FquNg3Iqo8TbtkVaYwRE98JkmzOcnbVUOcZDvD96MAVQBrxPAN%2BuJT%2BctCibXd1tA8SzQAVUOPWAzx0U%2BLgC5fX3e61QUXT8xdRiCsSGcUD1gexaCmn3UQ0O6FKz7BC9N8fsOmdmFag4kKNo13ETaHqsy1bZFNMi%2FYmjObPDY0ogQl01k4nEY0pYM%2BgGfjRIGdK9Yn5iIns9d3MHN9g9weyLVL7rZ6EhQwMY00hx%2FA5W1CsIo%2BJzCkVc9OF%2B%2BMVBbjEFxMIgSKGW1OklFPbyFvsw2%2F6vN77Zt0U1CJcVLvf5xqPqWY0jY%2BY3Xd8VdRtRU9xhH%2FxOV1r%2BROjBMqkgHBpH0kRzE6jagBZVWHv46LEBS6bJp5H3xBsv9flfvxeUKHTAi10cUwpMXmrhQBz%2BERaNZqsK4kPFBOp7zpUJ%2BsWedMJvvi8wGOrIBToUA9hku3I0LSwWSq3niRC0x8A8oNz0v5xsSVijM2Xs29eGiZX0OdLmz%2BVSU0dp5fxI9pCaIhF2GSoJZHGJxU6J2kwkcYxeNP4IyYuKkQODOyEzBSlLnRtnivBCuoK0x0%2BsujkmOrRjUVfagSxaXF2UZ9fH2ZAU3t%2Bx8xhM4OfrmxmDYT7QQiC%2BZAk0YjI0ZIxB6AtQBVYQZ%2BZh451sQXcSzIut%2FStxRL%2B0VgNgiJoSTmw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260204T074618Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV4E5YK7WW%2F20260204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=80959c3816aedf8b5d1449469fc141f8a46a80efaccc8dcc39da04368b1dfc80",
-      "mauContent": "<ul><li><p><span style=\"font-size: 20px\">April and June 2025 exceeded the plan target of 300 users.</span></p></li><li><p><span style=\"font-size: 20px\">Significant drop in active users noted from December 2025 to January 2026.</span></p></li><li><p><span style=\"font-size: 20px\">Overall YoY change shows a reduction of 56.7% in active users.</span></p></li></ul>",
-      "metrics1": "Training completion rates and sales performance correlation",
-      "metrics2": "Time-to-productivity and employee satisfaction scores",
-      "metrics3": "Customer engagement rates and certification completions",
-      "metrics4": "Partner activation rates and performance metrics",
-      "metrics5": "Learning ROI measurement and business impact tracking",
-      "meetGoalOne": "<span style=\"font-size: 14px\">· Align on your strategic goals and vision in partnership with Docebo.</span>",
-      "meetGoalTwo": "<span style=\"font-size: 14px\">· Showcase value in the tools you have access to, provide optimization recommendations and relevant product updates.</span>",
-      "meetGoalThree": "<span style=\"font-size: 14px\">· Success planning.</span>",
-      "key1": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "key2": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "key3": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "key4": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "key5": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "custOwner1": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "custOwner2": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "custOwner3": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "custOwner4": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "custOwner5": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "doceboOwner1": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "doceboOwner2": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "doceboOwner3": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "doceboOwner4": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "doceboOwner5": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "priority1": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "priority2": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "priority3": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "priority4": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "priority5": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "status1": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "status2": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "status3": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "status4": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "status5": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "dueDate1": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "dueDate2": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "dueDate3": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "dueDate4": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "dueDate5": "<span style=\"font-size: 9px\">Enter you text here</span>",
-      "milestone1": "Platform optimization initiatives",
-      "milestone2": "Customer education expansion",
-      "milestone3": "Partner training enhancement",
-      "milestone4": "Advanced analytics implementation",
-      "milestone5": "Learning ecosystem integration",
-      "outcome1": "Engagement",
-      "outcome10": "Effectiveness",
-      "outcome2": "Retention",
-      "outcome3": "Performance",
-      "outcome4": "Productivity",
-      "outcome5": "Satisfaction",
-      "outcome6": "Certification",
-      "outcome7": "Activation",
-      "outcome8": "ROI",
-      "outcome9": "Impact",
-      "productValue": "Leveraging comprehensive learning platform for sales enablement and professional development programs",
-      "progressImg1": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image17.png?response-content-disposition=attachment%3Bfilename%3D%22image17.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEgaCmFwLXNvdXRoLTEiRjBEAiBWKmUcXHmKTQzwsmzoTvYO6BJCmm%2BPaNBbUEwya4Vd%2BAIgMj9AoF%2FheVEXNJfnru4XVNuUU3yJO5Z41Ujz2w2KQrAqvwUIERAAGgw1NDY5MTgxMDYyODMiDOwh2B4AO8t%2FoO1LeSqcBb9k8ksXZc7%2BMF7PUJgeEz1Ew7pdyYGeUBo1eCW71jnUBsmU%2FpscTNUWr7588q7ZswgsGINMCpbB9EiSFuNEUa5vzaVxK7pyNXXcvUqkg5FowlQzTtWWyaQukejw3Ku2J2%2BybiVKQHR8DAq982HfG7N0vG6SjE7%2Fmg1HTTU%2FleHEow%2BLD7HreTVe2wJIQnIKMaSHLKstLtwAQ%2F8KII2dz75g05pzJszDZyZnMxEVX1ZVeE0u85LRDdvvK3Ga5Bw5R%2BVBabPzC%2BgXEvhq7gj9tP5Xav9jnwgPSy1vCOQgcu2QkEK0K6DB6M56MqMsF4jxQkPEsNEKuPxDaWYZqkgPdjeUawoLWltMqrE8gLs1iIY2ZkYmkpyKKwfumQOPjg4Dqqr5F26JYz7fYgFS1b7SwN0jdDMYzSYlZnuaOFTReKE7TVkipwqE8DHLrCPeBsYkYSF2I6rC4GALIYq%2FquNg3Iqo8TbtkVaYwRE98JkmzOcnbVUOcZDvD96MAVQBrxPAN%2BuJT%2BctCibXd1tA8SzQAVUOPWAzx0U%2BLgC5fX3e61QUXT8xdRiCsSGcUD1gexaCmn3UQ0O6FKz7BC9N8fsOmdmFag4kKNo13ETaHqsy1bZFNMi%2FYmjObPDY0ogQl01k4nEY0pYM%2BgGfjRIGdK9Yn5iIns9d3MHN9g9weyLVL7rZ6EhQwMY00hx%2FA5W1CsIo%2BJzCkVc9OF%2B%2BMVBbjEFxMIgSKGW1OklFPbyFvsw2%2F6vN77Zt0U1CJcVLvf5xqPqWY0jY%2BY3Xd8VdRtRU9xhH%2FxOV1r%2BROjBMqkgHBpH0kRzE6jagBZVWHv46LEBS6bJp5H3xBsv9flfvxeUKHTAi10cUwpMXmrhQBz%2BERaNZqsK4kPFBOp7zpUJ%2BsWedMJvvi8wGOrIBToUA9hku3I0LSwWSq3niRC0x8A8oNz0v5xsSVijM2Xs29eGiZX0OdLmz%2BVSU0dp5fxI9pCaIhF2GSoJZHGJxU6J2kwkcYxeNP4IyYuKkQODOyEzBSlLnRtnivBCuoK0x0%2BsujkmOrRjUVfagSxaXF2UZ9fH2ZAU3t%2Bx8xhM4OfrmxmDYT7QQiC%2BZAk0YjI0ZIxB6AtQBVYQZ%2BZh451sQXcSzIut%2FStxRL%2B0VgNgiJoSTmw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260204T074618Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV4E5YK7WW%2F20260204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=8700a3c6c6ece198172dfe85ba38d863ce922404362e3d2065f0bc5ec2b4486f",
-      "progressImg3": "Enter Your Text Here",
-      "progressImg4": "Enter Your Text Here",
-      "renewalDate": "Enter Your Text Here",
-      "slide10Img": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image9.png?response-content-disposition=attachment%3Bfilename%3D%22image9.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEgaCmFwLXNvdXRoLTEiRjBEAiBWKmUcXHmKTQzwsmzoTvYO6BJCmm%2BPaNBbUEwya4Vd%2BAIgMj9AoF%2FheVEXNJfnru4XVNuUU3yJO5Z41Ujz2w2KQrAqvwUIERAAGgw1NDY5MTgxMDYyODMiDOwh2B4AO8t%2FoO1LeSqcBb9k8ksXZc7%2BMF7PUJgeEz1Ew7pdyYGeUBo1eCW71jnUBsmU%2FpscTNUWr7588q7ZswgsGINMCpbB9EiSFuNEUa5vzaVxK7pyNXXcvUqkg5FowlQzTtWWyaQukejw3Ku2J2%2BybiVKQHR8DAq982HfG7N0vG6SjE7%2Fmg1HTTU%2FleHEow%2BLD7HreTVe2wJIQnIKMaSHLKstLtwAQ%2F8KII2dz75g05pzJszDZyZnMxEVX1ZVeE0u85LRDdvvK3Ga5Bw5R%2BVBabPzC%2BgXEvhq7gj9tP5Xav9jnwgPSy1vCOQgcu2QkEK0K6DB6M56MqMsF4jxQkPEsNEKuPxDaWYZqkgPdjeUawoLWltMqrE8gLs1iIY2ZkYmkpyKKwfumQOPjg4Dqqr5F26JYz7fYgFS1b7SwN0jdDMYzSYlZnuaOFTReKE7TVkipwqE8DHLrCPeBsYkYSF2I6rC4GALIYq%2FquNg3Iqo8TbtkVaYwRE98JkmzOcnbVUOcZDvD96MAVQBrxPAN%2BuJT%2BctCibXd1tA8SzQAVUOPWAzx0U%2BLgC5fX3e61QUXT8xdRiCsSGcUD1gexaCmn3UQ0O6FKz7BC9N8fsOmdmFag4kKNo13ETaHqsy1bZFNMi%2FYmjObPDY0ogQl01k4nEY0pYM%2BgGfjRIGdK9Yn5iIns9d3MHN9g9weyLVL7rZ6EhQwMY00hx%2FA5W1CsIo%2BJzCkVc9OF%2B%2BMVBbjEFxMIgSKGW1OklFPbyFvsw2%2F6vN77Zt0U1CJcVLvf5xqPqWY0jY%2BY3Xd8VdRtRU9xhH%2FxOV1r%2BROjBMqkgHBpH0kRzE6jagBZVWHv46LEBS6bJp5H3xBsv9flfvxeUKHTAi10cUwpMXmrhQBz%2BERaNZqsK4kPFBOp7zpUJ%2BsWedMJvvi8wGOrIBToUA9hku3I0LSwWSq3niRC0x8A8oNz0v5xsSVijM2Xs29eGiZX0OdLmz%2BVSU0dp5fxI9pCaIhF2GSoJZHGJxU6J2kwkcYxeNP4IyYuKkQODOyEzBSlLnRtnivBCuoK0x0%2BsujkmOrRjUVfagSxaXF2UZ9fH2ZAU3t%2Bx8xhM4OfrmxmDYT7QQiC%2BZAk0YjI0ZIxB6AtQBVYQZ%2BZh451sQXcSzIut%2FStxRL%2B0VgNgiJoSTmw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260204T074617Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV4E5YK7WW%2F20260204%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=1096c404d59c308def1d5dd9427d7e02e7d7c9b514a30055edf0f8ec6765f0b9",
-      "solutions1": "Learn",
-      "solutions2": "Connect",
-      "solutions3": "Academy",
-      "strategicValue": "Driving comprehensive learning transformation across sales enablement and customer education initiatives",
-      "tableData": [
-        {
-          "actionPlan": "Deploy advanced sales training modules and analytics",
-          "area": "Sales Enablement Enhancement",
-          "features": "Advanced learning paths and performance tracking",
-          "impact": "Improved sales performance and faster onboarding",
-          "stage": "Implementing",
-          "useCase": "Internal sales team training and performance improvement programs"
-        },
-        {
-          "actionPlan": "Launch comprehensive customer education portal",
-          "area": "Customer Education Expansion",
-          "features": "Extended enterprise and certification management",
-          "impact": "Enhanced customer satisfaction and product adoption",
-          "stage": "Adopting",
-          "useCase": "External customer training and certification programs"
-        },
-        {
-          "actionPlan": "Implement comprehensive learning analytics dashboard",
-          "area": "Learning Analytics Implementation",
-          "features": "Advanced reporting and learning analytics",
-          "impact": "Data-driven learning decisions and ROI measurement",
-          "stage": "Not started",
-          "useCase": "Internal performance measurement and ROI tracking"
-        },
-        {
-          "actionPlan": "Enhance partner training programs and tracking",
-          "area": "Partner Training Optimization",
-          "features": "Partner portal and certification tracking",
-          "impact": "Improved partner performance and engagement",
-          "stage": "Adopting",
-          "useCase": "External partner enablement and certification programs"
-        }
-      ],
-      "techStack1": "Enter Tool 1",
-      "techStack2": "Enter Tool 2",
-      "techStack3": "Enter Tool 3",
-      "useCase1": "Sales",
-      "useCase2": "Onboarding",
-      "useCase3": "Customer",
-      "winsValue": "Successfully established multi-faceted learning platform supporting sales, onboarding and customer education"
-    }
+    "accountName": "Bupa",
+    "accountTeamArray": [
+      {
+        "citations": "[7,8,11,12]",
+        "membership": "Digital Learning Manager",
+        "name": "Martin Pagan",
+        "profilePicture": ""
+      },
+      {
+        "citations": "[9,10,12]",
+        "membership": "Global Learning Product Owner",
+        "name": "Ryan Steer",
+        "profilePicture": ""
+      },
+      {
+        "citations": "[8,13]",
+        "membership": "Design Team Manager",
+        "name": "James Yorke",
+        "profilePicture": ""
+      },
+      {
+        "citations": "[9]",
+        "membership": "Digital Learning Experience Specialist",
+        "name": "Michael Elliott",
+        "profilePicture": ""
+      },
+      {
+        "citations": "[11]",
+        "membership": "Registered Nutritional Therapist and Nutritionist",
+        "name": "Becky Hogan",
+        "profilePicture": ""
+      }
+    ],
+    "ceChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image15.png?response-content-disposition=attachment%3Bfilename%3D%22image15.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCmFwLXNvdXRoLTEiRzBFAiEAjwG79lqlz9pUdJ4iMY6xzA%2Bhhor7yVFexPtf148rf0sCIAGDyLasd1x8kjkNeNNLt4RGsO873I95%2FOEollDAYzpDKscFCNj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgzO8sQFThv%2Bs%2B38TPkqmwWevxBNZU3S3C4IBHxSJ76XMjV4A2%2Foh3lxsqmOlRcPNSn0MbpBfFF%2BeGs9PY%2Bp44S63KL1fD6NZBDtFY%2Fb1NfXmURqb7IzI2ZSQnEr%2FO0Z2bC7l1bpsv9IGoM9SZsowsOAqSV%2FDt9%2BxQKUybpUVYmlfBFsWkvtWoGdnRjmN66Udz5l5il66HKiPONexc1GSstScNM558boiK1WZqZKpy7zgHVsjqZY%2FqVINkYslkwvhohM5hUbAPeIEG88oN14l8%2BTrdUkPWlqoZRp%2FVxFy%2B8Lzx%2F7j7xFerbsGN2w6U%2BEBbWTuCpP4HkyRyBaxe7mF2CAmHvkP%2BhyOKeg1t4PEJQ%2BHGOF7K%2FV0GdO5499bMILqfKU%2BMTPiYgiy0ri91ox1HJxtTgDPK9K9NGSWKtWqYnxhkxEJ5cwkIvncx07lCZRTXhWS7ILzYK0HUuoMcDRYqNb6kHShuzbu%2Baf%2BPhPreOM%2BFjsEEtl%2BbOWzzz%2BQRsSpPMt53JUaCqG2G3v8BmQThBxybsMW%2FJPWs78ZpipbIuE9uIgjYk14%2BPgd2BxoQLbHAprAfaFbSEevmrlBSUYjZQiD5f5XQpIn549qQCumXuIQAuw1KR8pydmAaFFxTB8VYaop8n%2BvSW4KMxBYBXjuugksb6X%2FEoDdrix2z0lmZWPNdi%2FPpl%2FnholoTCZ%2FHJPwcL5oLV7BJ%2F4Y5YbWk%2FvcGDsGtPx5wYjLWgFN141WIH6X2ONlXs6sHk93IuaJ7f21DWQYcCqCpXj3Cl8hdWOLi0vsQvc5n2VW9M8%2FuifskJJsYNUUtCwcwMItW5CuqJGxIWyKI5YiDctroeSUQ%2B%2B78Ut1kU1Ki3Y4KDKMqd8js0xr0y0jV973BCON88JPm2mBpjLK9ii1vJo7PisMMDZt8wGOrEBubP%2BH4R7ImES7dcvkjcYyvRC7d7EOaOniwxNCN1SWrVuML2mt97yTrFOoyWRWjgB2ZPNVoM4HG4R1OJztDTtzVGPr6bBRvfpMrwUweoiMCNqpbKM2IqES237UHNXKVlA6U%2FKlwpA1U6L50JogQ6MLsMAqn9xL5HHbXkGG6NZeOfUuEGYesEJdkjanQoeiTU88V7XK28PZIC%2F83FEnFBvwzwbigMoRPU61bQ4XXHOBG43&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260212T154423Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV654CIRWF%2F20260212%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=19d9ae89da7dfc022fc369ad379a233466740ac89226f6a3507ad6a00777e941",
+    "ceContent": "<ul><li><p><span style=\"font-size: 20px\">Significant spike in E-Learning enrollments in January and February 2025, peaking at 130,042.</span></p></li><li><p><span style=\"font-size: 20px\">ILT and Internal enrollments mirror each other, with highest activity from December 2024 to February 2025.</span></p></li><li><p><span style=\"font-size: 20px\">No enrollments recorded from April 2025 onwards; opportunity to investigate causes.</span></p></li><li><p><span style=\"font-size: 20px\">Self, Admin, and Docebo Content enrollments remain at zero throughout the period.</span></p></li></ul>",
+    "certificationsIssued": "<ul><li><p><span style=\"font-size: 20px\">February 2025 had the highest completions at 18,552, far exceeding other months.</span></p></li><li><p><span style=\"font-size: 20px\">July 2025 saw another spike with 12,587 completions after a significant drop in June.</span></p></li><li><p><span style=\"font-size: 20px\">Completions remained relatively stable between August 2025 and January 2026, averaging around 6,000–7,600 per month.</span></p></li></ul>",
+    "date": "3 Dec 2025",
+    "date1": "05-2025",
+    "date2": "12-2025",
+    "date3": "10-2025",
+    "date4": "03-2026",
+    "date5": "06-2026",
+    "doceboTeamArray": [
+      {
+        "Citations": "[7,8,9,10,13]",
+        "membership": "Account Manager",
+        "name": "Robert Embrack",
+        "profilePicture": "Unavailable"
+      },
+      {
+        "Citations": "[7,8,9,10,13]",
+        "membership": "Executive Sponsor",
+        "name": "Noel Miller",
+        "profilePicture": "Unavailable"
+      },
+      {
+        "Citations": "[7,8,9,10,13]",
+        "membership": "Customer Success Manager",
+        "name": "Martin Nowak",
+        "profilePicture": "Unavailable"
+      },
+      {
+        "Citations": "[7,8,9,10,13]",
+        "membership": "Premium Support Advisor",
+        "name": "Samet Turk",
+        "profilePicture": "Unavailable"
+      }
+    ],
+    "goal1": "Implement automated archiving solution for recurring courses",
+    "goal2": "Deploy AI authoring tools for rapid content creation",
+    "goal3": "Enhance manager dashboard capabilities for team oversight",
+    "goal4": "Expand reporting functionality beyond 8MB limitations",
+    "goal5": "Launch professional development beyond compliance training",
+    "headerUrl": "Enter Your Text Here",
+    "imageUrl": "https://t4.ftcdn.net/jpg/03/32/41/57/360_F_332415747_wgPEZYABPCoBC2MbbZMsK9NHEguootsb.jpg",
+    "learningPlansContent": "<ul><li><p><span style=\"font-size: 20px\">In February 2025, there were 1,269 Learning Plan completions.</span></p></li><li><p><span style=\"font-size: 20px\">February 2025 data provides a baseline for future comparison.</span></p></li><li><p><span style=\"font-size: 20px\">No completion data is available for other months to assess trends.</span></p></li></ul>",
+    "logoUrl": "https://zenprospect-production.s3.amazonaws.com/uploads/pictures/685899851ad59c00018c53b1/picture",
+    "lookingValue": "Expanding beyond compliance into professional development programmes",
+    "lsChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image14.png?response-content-disposition=attachment%3Bfilename%3D%22image14.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCmFwLXNvdXRoLTEiRzBFAiEAjwG79lqlz9pUdJ4iMY6xzA%2Bhhor7yVFexPtf148rf0sCIAGDyLasd1x8kjkNeNNLt4RGsO873I95%2FOEollDAYzpDKscFCNj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgzO8sQFThv%2Bs%2B38TPkqmwWevxBNZU3S3C4IBHxSJ76XMjV4A2%2Foh3lxsqmOlRcPNSn0MbpBfFF%2BeGs9PY%2Bp44S63KL1fD6NZBDtFY%2Fb1NfXmURqb7IzI2ZSQnEr%2FO0Z2bC7l1bpsv9IGoM9SZsowsOAqSV%2FDt9%2BxQKUybpUVYmlfBFsWkvtWoGdnRjmN66Udz5l5il66HKiPONexc1GSstScNM558boiK1WZqZKpy7zgHVsjqZY%2FqVINkYslkwvhohM5hUbAPeIEG88oN14l8%2BTrdUkPWlqoZRp%2FVxFy%2B8Lzx%2F7j7xFerbsGN2w6U%2BEBbWTuCpP4HkyRyBaxe7mF2CAmHvkP%2BhyOKeg1t4PEJQ%2BHGOF7K%2FV0GdO5499bMILqfKU%2BMTPiYgiy0ri91ox1HJxtTgDPK9K9NGSWKtWqYnxhkxEJ5cwkIvncx07lCZRTXhWS7ILzYK0HUuoMcDRYqNb6kHShuzbu%2Baf%2BPhPreOM%2BFjsEEtl%2BbOWzzz%2BQRsSpPMt53JUaCqG2G3v8BmQThBxybsMW%2FJPWs78ZpipbIuE9uIgjYk14%2BPgd2BxoQLbHAprAfaFbSEevmrlBSUYjZQiD5f5XQpIn549qQCumXuIQAuw1KR8pydmAaFFxTB8VYaop8n%2BvSW4KMxBYBXjuugksb6X%2FEoDdrix2z0lmZWPNdi%2FPpl%2FnholoTCZ%2FHJPwcL5oLV7BJ%2F4Y5YbWk%2FvcGDsGtPx5wYjLWgFN141WIH6X2ONlXs6sHk93IuaJ7f21DWQYcCqCpXj3Cl8hdWOLi0vsQvc5n2VW9M8%2FuifskJJsYNUUtCwcwMItW5CuqJGxIWyKI5YiDctroeSUQ%2B%2B78Ut1kU1Ki3Y4KDKMqd8js0xr0y0jV973BCON88JPm2mBpjLK9ii1vJo7PisMMDZt8wGOrEBubP%2BH4R7ImES7dcvkjcYyvRC7d7EOaOniwxNCN1SWrVuML2mt97yTrFOoyWRWjgB2ZPNVoM4HG4R1OJztDTtzVGPr6bBRvfpMrwUweoiMCNqpbKM2IqES237UHNXKVlA6U%2FKlwpA1U6L50JogQ6MLsMAqn9xL5HHbXkGG6NZeOfUuEGYesEJdkjanQoeiTU88V7XK28PZIC%2F83FEnFBvwzwbigMoRPU61bQ4XXHOBG43&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260212T154423Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV654CIRWF%2F20260212%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=651b473bb594ec859662402d65fc9ae0579da52e79119c8af57861fa14a30885",
+    "lsContent": "<ul><li><p><span style=\"font-size: 20px\">E Learning consistently accounts for over 85% of total learning time each month.</span></p></li><li><p><span style=\"font-size: 20px\">ILT time peaked in June 2025 at 712,020 min, then declined steadily to January 2026.</span></p></li><li><p><span style=\"font-size: 20px\">Total learning time reached its highest in September and October 2025, then declined towards January 2026.</span></p></li><li><p><span style=\"font-size: 20px\">December 2024 had the lowest learning time in the period shown.</span></p></li><li><p><span style=\"font-size: 20px\">CSM focus: Strong shift toward E Learning, ILT may require engagement or platform review.</span></p></li></ul>",
+    "mauChart": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image13.png?response-content-disposition=attachment%3Bfilename%3D%22image13.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCmFwLXNvdXRoLTEiRzBFAiEAjwG79lqlz9pUdJ4iMY6xzA%2Bhhor7yVFexPtf148rf0sCIAGDyLasd1x8kjkNeNNLt4RGsO873I95%2FOEollDAYzpDKscFCNj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgzO8sQFThv%2Bs%2B38TPkqmwWevxBNZU3S3C4IBHxSJ76XMjV4A2%2Foh3lxsqmOlRcPNSn0MbpBfFF%2BeGs9PY%2Bp44S63KL1fD6NZBDtFY%2Fb1NfXmURqb7IzI2ZSQnEr%2FO0Z2bC7l1bpsv9IGoM9SZsowsOAqSV%2FDt9%2BxQKUybpUVYmlfBFsWkvtWoGdnRjmN66Udz5l5il66HKiPONexc1GSstScNM558boiK1WZqZKpy7zgHVsjqZY%2FqVINkYslkwvhohM5hUbAPeIEG88oN14l8%2BTrdUkPWlqoZRp%2FVxFy%2B8Lzx%2F7j7xFerbsGN2w6U%2BEBbWTuCpP4HkyRyBaxe7mF2CAmHvkP%2BhyOKeg1t4PEJQ%2BHGOF7K%2FV0GdO5499bMILqfKU%2BMTPiYgiy0ri91ox1HJxtTgDPK9K9NGSWKtWqYnxhkxEJ5cwkIvncx07lCZRTXhWS7ILzYK0HUuoMcDRYqNb6kHShuzbu%2Baf%2BPhPreOM%2BFjsEEtl%2BbOWzzz%2BQRsSpPMt53JUaCqG2G3v8BmQThBxybsMW%2FJPWs78ZpipbIuE9uIgjYk14%2BPgd2BxoQLbHAprAfaFbSEevmrlBSUYjZQiD5f5XQpIn549qQCumXuIQAuw1KR8pydmAaFFxTB8VYaop8n%2BvSW4KMxBYBXjuugksb6X%2FEoDdrix2z0lmZWPNdi%2FPpl%2FnholoTCZ%2FHJPwcL5oLV7BJ%2F4Y5YbWk%2FvcGDsGtPx5wYjLWgFN141WIH6X2ONlXs6sHk93IuaJ7f21DWQYcCqCpXj3Cl8hdWOLi0vsQvc5n2VW9M8%2FuifskJJsYNUUtCwcwMItW5CuqJGxIWyKI5YiDctroeSUQ%2B%2B78Ut1kU1Ki3Y4KDKMqd8js0xr0y0jV973BCON88JPm2mBpjLK9ii1vJo7PisMMDZt8wGOrEBubP%2BH4R7ImES7dcvkjcYyvRC7d7EOaOniwxNCN1SWrVuML2mt97yTrFOoyWRWjgB2ZPNVoM4HG4R1OJztDTtzVGPr6bBRvfpMrwUweoiMCNqpbKM2IqES237UHNXKVlA6U%2FKlwpA1U6L50JogQ6MLsMAqn9xL5HHbXkGG6NZeOfUuEGYesEJdkjanQoeiTU88V7XK28PZIC%2F83FEnFBvwzwbigMoRPU61bQ4XXHOBG43&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260212T154423Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV654CIRWF%2F20260212%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=859757581bbd3232b9f148c281ebb0c8a8ca4440c5b0ebf7318fe786d3dccff2",
+    "mauContent": "<ul><li><p><span style=\"font-size: 20px\">Usage exceeded targets in October and November 2025.</span></p></li><li><p><span style=\"font-size: 20px\">Major drop observed in user count from October to December 2025.</span></p></li><li><p><span style=\"font-size: 20px\">YoY Change indicates a decrease of 7.24%.</span></p></li></ul>",
+    "metrics1": "Reduction in manual archiving support tickets",
+    "metrics2": "Content development time reduction percentage",
+    "metrics3": "Manager engagement and utilization rates",
+    "metrics4": "Report automation success rate",
+    "metrics5": "Programme adoption and completion rates",
+    "milestone1": "Bupa Dental Docebo alignment meeting",
+    "milestone2": "AI Authoring tool demonstration sessions",
+    "milestone3": "Senior CSM introduction and alignment",
+    "milestone4": "Professional development programme launch",
+    "milestone5": "Certification redesign implementation",
+    "outcome1": "Compliance Efficiency",
+    "outcome10": "Business Continuity",
+    "outcome2": "Automated Workflows",
+    "outcome3": "Manager Visibility",
+    "outcome4": "Content Scalability",
+    "outcome5": "Regulatory Adherence",
+    "outcome6": "User Experience",
+    "outcome7": "Training Effectiveness",
+    "outcome8": "Cost Reduction",
+    "outcome9": "Process Automation",
+    "productValue": "Implementing AI authoring tools for rapid content development",
+    "progressImg1": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image19.png?response-content-disposition=attachment%3Bfilename%3D%22image19.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCmFwLXNvdXRoLTEiRzBFAiEAjwG79lqlz9pUdJ4iMY6xzA%2Bhhor7yVFexPtf148rf0sCIAGDyLasd1x8kjkNeNNLt4RGsO873I95%2FOEollDAYzpDKscFCNj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgzO8sQFThv%2Bs%2B38TPkqmwWevxBNZU3S3C4IBHxSJ76XMjV4A2%2Foh3lxsqmOlRcPNSn0MbpBfFF%2BeGs9PY%2Bp44S63KL1fD6NZBDtFY%2Fb1NfXmURqb7IzI2ZSQnEr%2FO0Z2bC7l1bpsv9IGoM9SZsowsOAqSV%2FDt9%2BxQKUybpUVYmlfBFsWkvtWoGdnRjmN66Udz5l5il66HKiPONexc1GSstScNM558boiK1WZqZKpy7zgHVsjqZY%2FqVINkYslkwvhohM5hUbAPeIEG88oN14l8%2BTrdUkPWlqoZRp%2FVxFy%2B8Lzx%2F7j7xFerbsGN2w6U%2BEBbWTuCpP4HkyRyBaxe7mF2CAmHvkP%2BhyOKeg1t4PEJQ%2BHGOF7K%2FV0GdO5499bMILqfKU%2BMTPiYgiy0ri91ox1HJxtTgDPK9K9NGSWKtWqYnxhkxEJ5cwkIvncx07lCZRTXhWS7ILzYK0HUuoMcDRYqNb6kHShuzbu%2Baf%2BPhPreOM%2BFjsEEtl%2BbOWzzz%2BQRsSpPMt53JUaCqG2G3v8BmQThBxybsMW%2FJPWs78ZpipbIuE9uIgjYk14%2BPgd2BxoQLbHAprAfaFbSEevmrlBSUYjZQiD5f5XQpIn549qQCumXuIQAuw1KR8pydmAaFFxTB8VYaop8n%2BvSW4KMxBYBXjuugksb6X%2FEoDdrix2z0lmZWPNdi%2FPpl%2FnholoTCZ%2FHJPwcL5oLV7BJ%2F4Y5YbWk%2FvcGDsGtPx5wYjLWgFN141WIH6X2ONlXs6sHk93IuaJ7f21DWQYcCqCpXj3Cl8hdWOLi0vsQvc5n2VW9M8%2FuifskJJsYNUUtCwcwMItW5CuqJGxIWyKI5YiDctroeSUQ%2B%2B78Ut1kU1Ki3Y4KDKMqd8js0xr0y0jV973BCON88JPm2mBpjLK9ii1vJo7PisMMDZt8wGOrEBubP%2BH4R7ImES7dcvkjcYyvRC7d7EOaOniwxNCN1SWrVuML2mt97yTrFOoyWRWjgB2ZPNVoM4HG4R1OJztDTtzVGPr6bBRvfpMrwUweoiMCNqpbKM2IqES237UHNXKVlA6U%2FKlwpA1U6L50JogQ6MLsMAqn9xL5HHbXkGG6NZeOfUuEGYesEJdkjanQoeiTU88V7XK28PZIC%2F83FEnFBvwzwbigMoRPU61bQ4XXHOBG43&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260212T154424Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV654CIRWF%2F20260212%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=6f7e03f46c458d0d2ea12a1e0abcbd32ca0f6b06145ede656a334fedd27e2b71",
+    "progressImg3": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image17.png?response-content-disposition=attachment%3Bfilename%3D%22image17.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCmFwLXNvdXRoLTEiRzBFAiEAjwG79lqlz9pUdJ4iMY6xzA%2Bhhor7yVFexPtf148rf0sCIAGDyLasd1x8kjkNeNNLt4RGsO873I95%2FOEollDAYzpDKscFCNj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgzO8sQFThv%2Bs%2B38TPkqmwWevxBNZU3S3C4IBHxSJ76XMjV4A2%2Foh3lxsqmOlRcPNSn0MbpBfFF%2BeGs9PY%2Bp44S63KL1fD6NZBDtFY%2Fb1NfXmURqb7IzI2ZSQnEr%2FO0Z2bC7l1bpsv9IGoM9SZsowsOAqSV%2FDt9%2BxQKUybpUVYmlfBFsWkvtWoGdnRjmN66Udz5l5il66HKiPONexc1GSstScNM558boiK1WZqZKpy7zgHVsjqZY%2FqVINkYslkwvhohM5hUbAPeIEG88oN14l8%2BTrdUkPWlqoZRp%2FVxFy%2B8Lzx%2F7j7xFerbsGN2w6U%2BEBbWTuCpP4HkyRyBaxe7mF2CAmHvkP%2BhyOKeg1t4PEJQ%2BHGOF7K%2FV0GdO5499bMILqfKU%2BMTPiYgiy0ri91ox1HJxtTgDPK9K9NGSWKtWqYnxhkxEJ5cwkIvncx07lCZRTXhWS7ILzYK0HUuoMcDRYqNb6kHShuzbu%2Baf%2BPhPreOM%2BFjsEEtl%2BbOWzzz%2BQRsSpPMt53JUaCqG2G3v8BmQThBxybsMW%2FJPWs78ZpipbIuE9uIgjYk14%2BPgd2BxoQLbHAprAfaFbSEevmrlBSUYjZQiD5f5XQpIn549qQCumXuIQAuw1KR8pydmAaFFxTB8VYaop8n%2BvSW4KMxBYBXjuugksb6X%2FEoDdrix2z0lmZWPNdi%2FPpl%2FnholoTCZ%2FHJPwcL5oLV7BJ%2F4Y5YbWk%2FvcGDsGtPx5wYjLWgFN141WIH6X2ONlXs6sHk93IuaJ7f21DWQYcCqCpXj3Cl8hdWOLi0vsQvc5n2VW9M8%2FuifskJJsYNUUtCwcwMItW5CuqJGxIWyKI5YiDctroeSUQ%2B%2B78Ut1kU1Ki3Y4KDKMqd8js0xr0y0jV973BCON88JPm2mBpjLK9ii1vJo7PisMMDZt8wGOrEBubP%2BH4R7ImES7dcvkjcYyvRC7d7EOaOniwxNCN1SWrVuML2mt97yTrFOoyWRWjgB2ZPNVoM4HG4R1OJztDTtzVGPr6bBRvfpMrwUweoiMCNqpbKM2IqES237UHNXKVlA6U%2FKlwpA1U6L50JogQ6MLsMAqn9xL5HHbXkGG6NZeOfUuEGYesEJdkjanQoeiTU88V7XK28PZIC%2F83FEnFBvwzwbigMoRPU61bQ4XXHOBG43&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260212T154423Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV654CIRWF%2F20260212%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=fa116af1ac9036f5546558fac8fe2d93d5b49f502fab9c6c17bbdb23e1d03468",
+    "progressImg4": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image18.png?response-content-disposition=attachment%3Bfilename%3D%22image18.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCmFwLXNvdXRoLTEiRzBFAiEAjwG79lqlz9pUdJ4iMY6xzA%2Bhhor7yVFexPtf148rf0sCIAGDyLasd1x8kjkNeNNLt4RGsO873I95%2FOEollDAYzpDKscFCNj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgzO8sQFThv%2Bs%2B38TPkqmwWevxBNZU3S3C4IBHxSJ76XMjV4A2%2Foh3lxsqmOlRcPNSn0MbpBfFF%2BeGs9PY%2Bp44S63KL1fD6NZBDtFY%2Fb1NfXmURqb7IzI2ZSQnEr%2FO0Z2bC7l1bpsv9IGoM9SZsowsOAqSV%2FDt9%2BxQKUybpUVYmlfBFsWkvtWoGdnRjmN66Udz5l5il66HKiPONexc1GSstScNM558boiK1WZqZKpy7zgHVsjqZY%2FqVINkYslkwvhohM5hUbAPeIEG88oN14l8%2BTrdUkPWlqoZRp%2FVxFy%2B8Lzx%2F7j7xFerbsGN2w6U%2BEBbWTuCpP4HkyRyBaxe7mF2CAmHvkP%2BhyOKeg1t4PEJQ%2BHGOF7K%2FV0GdO5499bMILqfKU%2BMTPiYgiy0ri91ox1HJxtTgDPK9K9NGSWKtWqYnxhkxEJ5cwkIvncx07lCZRTXhWS7ILzYK0HUuoMcDRYqNb6kHShuzbu%2Baf%2BPhPreOM%2BFjsEEtl%2BbOWzzz%2BQRsSpPMt53JUaCqG2G3v8BmQThBxybsMW%2FJPWs78ZpipbIuE9uIgjYk14%2BPgd2BxoQLbHAprAfaFbSEevmrlBSUYjZQiD5f5XQpIn549qQCumXuIQAuw1KR8pydmAaFFxTB8VYaop8n%2BvSW4KMxBYBXjuugksb6X%2FEoDdrix2z0lmZWPNdi%2FPpl%2FnholoTCZ%2FHJPwcL5oLV7BJ%2F4Y5YbWk%2FvcGDsGtPx5wYjLWgFN141WIH6X2ONlXs6sHk93IuaJ7f21DWQYcCqCpXj3Cl8hdWOLi0vsQvc5n2VW9M8%2FuifskJJsYNUUtCwcwMItW5CuqJGxIWyKI5YiDctroeSUQ%2B%2B78Ut1kU1Ki3Y4KDKMqd8js0xr0y0jV973BCON88JPm2mBpjLK9ii1vJo7PisMMDZt8wGOrEBubP%2BH4R7ImES7dcvkjcYyvRC7d7EOaOniwxNCN1SWrVuML2mt97yTrFOoyWRWjgB2ZPNVoM4HG4R1OJztDTtzVGPr6bBRvfpMrwUweoiMCNqpbKM2IqES237UHNXKVlA6U%2FKlwpA1U6L50JogQ6MLsMAqn9xL5HHbXkGG6NZeOfUuEGYesEJdkjanQoeiTU88V7XK28PZIC%2F83FEnFBvwzwbigMoRPU61bQ4XXHOBG43&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260212T154423Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV654CIRWF%2F20260212%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=3a4d4e79ef9cd6c48d6cb61ccff25e197de0262ecd57dd815c2c1b3dfd3e77a5",
+    "renewalDate": "Aug-09-2028",
+    "slide10Img": "https://s3.ap-south-1.amazonaws.com/uat.unifyapps.com.cloudstorage.722/workflow_uploads/722/image9.png?response-content-disposition=attachment%3Bfilename%3D%22image9.png%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCmFwLXNvdXRoLTEiRzBFAiEAjwG79lqlz9pUdJ4iMY6xzA%2Bhhor7yVFexPtf148rf0sCIAGDyLasd1x8kjkNeNNLt4RGsO873I95%2FOEollDAYzpDKscFCNj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgzO8sQFThv%2Bs%2B38TPkqmwWevxBNZU3S3C4IBHxSJ76XMjV4A2%2Foh3lxsqmOlRcPNSn0MbpBfFF%2BeGs9PY%2Bp44S63KL1fD6NZBDtFY%2Fb1NfXmURqb7IzI2ZSQnEr%2FO0Z2bC7l1bpsv9IGoM9SZsowsOAqSV%2FDt9%2BxQKUybpUVYmlfBFsWkvtWoGdnRjmN66Udz5l5il66HKiPONexc1GSstScNM558boiK1WZqZKpy7zgHVsjqZY%2FqVINkYslkwvhohM5hUbAPeIEG88oN14l8%2BTrdUkPWlqoZRp%2FVxFy%2B8Lzx%2F7j7xFerbsGN2w6U%2BEBbWTuCpP4HkyRyBaxe7mF2CAmHvkP%2BhyOKeg1t4PEJQ%2BHGOF7K%2FV0GdO5499bMILqfKU%2BMTPiYgiy0ri91ox1HJxtTgDPK9K9NGSWKtWqYnxhkxEJ5cwkIvncx07lCZRTXhWS7ILzYK0HUuoMcDRYqNb6kHShuzbu%2Baf%2BPhPreOM%2BFjsEEtl%2BbOWzzz%2BQRsSpPMt53JUaCqG2G3v8BmQThBxybsMW%2FJPWs78ZpipbIuE9uIgjYk14%2BPgd2BxoQLbHAprAfaFbSEevmrlBSUYjZQiD5f5XQpIn549qQCumXuIQAuw1KR8pydmAaFFxTB8VYaop8n%2BvSW4KMxBYBXjuugksb6X%2FEoDdrix2z0lmZWPNdi%2FPpl%2FnholoTCZ%2FHJPwcL5oLV7BJ%2F4Y5YbWk%2FvcGDsGtPx5wYjLWgFN141WIH6X2ONlXs6sHk93IuaJ7f21DWQYcCqCpXj3Cl8hdWOLi0vsQvc5n2VW9M8%2FuifskJJsYNUUtCwcwMItW5CuqJGxIWyKI5YiDctroeSUQ%2B%2B78Ut1kU1Ki3Y4KDKMqd8js0xr0y0jV973BCON88JPm2mBpjLK9ii1vJo7PisMMDZt8wGOrEBubP%2BH4R7ImES7dcvkjcYyvRC7d7EOaOniwxNCN1SWrVuML2mt97yTrFOoyWRWjgB2ZPNVoM4HG4R1OJztDTtzVGPr6bBRvfpMrwUweoiMCNqpbKM2IqES237UHNXKVlA6U%2FKlwpA1U6L50JogQ6MLsMAqn9xL5HHbXkGG6NZeOfUuEGYesEJdkjanQoeiTU88V7XK28PZIC%2F83FEnFBvwzwbigMoRPU61bQ4XXHOBG43&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260212T154423Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV654CIRWF%2F20260212%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=86400&X-Amz-Signature=aefc825ced3553ed0bc3d784165e5a854b3d2fcf10e6cc698cd312a85f2dfc7f",
+    "solutions1": "Learn LMS",
+    "solutions2": "AI Authoring",
+    "solutions3": "Custom Solutions",
+    "strategicValue": "Driving digital learning transformation across global healthcare operations",
+    "tableData": [
+      {
+        "actionPlan": "Deploy iframe widget solution with IT approval",
+        "area": "Archiving Automation",
+        "features": "Custom archiving solution with iframe widget",
+        "impact": "Reduced manual intervention and support tickets",
+        "stage": "Implementing",
+        "useCase": "Internal compliance training with automated enrollment management"
+      },
+      {
+        "actionPlan": "Complete security approval and user training",
+        "area": "Content Development",
+        "features": "AI Authoring tool with brand guidelines integration",
+        "impact": "Faster content development and consistency",
+        "stage": "Adopting",
+        "useCase": "Internal rapid content creation for clinical updates"
+      },
+      {
+        "actionPlan": "Evaluate dashboard configuration options",
+        "area": "Manager Engagement",
+        "features": "Enhanced manager dashboard with editing capabilities",
+        "impact": "Improved team visibility and engagement",
+        "stage": "Not started",
+        "useCase": "Internal team oversight and performance tracking"
+      },
+      {
+        "actionPlan": "Implement file size increase and automation",
+        "area": "Reporting Enhancement",
+        "features": "Increased file size limits and Power BI integration",
+        "impact": "Streamlined reporting and automation capabilities",
+        "stage": "Implementing",
+        "useCase": "Internal automated reporting for compliance tracking"
+      }
+    ],
+    "techStack1": "MS Teams",
+    "techStack2": "Azure",
+    "techStack3": "Power BI",
+    "useCase1": "Compliance",
+    "useCase2": "Onboarding",
+    "useCase3": "CPD",
+    "winsValue": "Significant reduction in platform support tickets post-implementation"
+  }
       
   
   try {
@@ -566,6 +570,8 @@ function buildAllReplacements(parameters) {
           break;
         // Add this inside the switch block in buildAllReplacements
         case 'mauContent':
+        case 'learningPlansContent':
+        case 'certificationsIssued':
         case 'lsContent':
         case 'ceContent':
           processInsights(parameters, replacements);
@@ -653,6 +659,8 @@ function buildAllReplacements(parameters) {
         case 'outcome10':
         case 'outcome11':
         case 'outcome12':
+        case 'LPContent':
+        case 'LPChart':
         case 'mauChart':
         case 'lsChart':
         case 'ceChart':
@@ -690,6 +698,19 @@ function processInsights(parameters, replacements) {
   replacements['{{mauContent}}'] = JSON.stringify(mauContentArray);
   Logger.log(`✅ Processed mauContent: ${mauContentArray.length} items`);
   
+  //Process learningPlansContent
+  const learningPlansContent = parameters.learningPlansContent || '';
+  const learningPlansContentArray = convertHtmlListToArray(learningPlansContent);
+  replacements['{{learningPlansContent}}'] = JSON.stringify(learningPlansContentArray);
+  Logger.log(`✅ Processed learningPlansContent: ${learningPlansContentArray.length} items`);
+
+
+  //Process certificationsIssued
+  const certificationsIssued = parameters.certificationsIssued || '';
+  const certificationsIssuedArray = convertHtmlListToArray(certificationsIssued);
+  replacements['{{certificationsIssued}}'] = JSON.stringify(certificationsIssuedArray);
+  Logger.log(`✅ Processed certificationsIssued: ${certificationsIssuedArray.length} items`);
+
   // Process lsContent
   const lsContent = parameters.lsContent || '';
   const lsContentArray = convertHtmlListToArray(lsContent);
@@ -791,13 +812,15 @@ function processSlideData(parameters, replacements) {
     'outcome10',
     'outcome11',
     'outcome12',
+    'LPContent',
+    'LPChart',
     'mauChart',
     'lsChart',
     'ceChart',
     'headerUrl',
     'progressImg1',
     'slide10Img',
-    'progressImg3',
+    'progressImg3', //progressImg3 ko change kra h
     'progressImg4'
   ];
 
